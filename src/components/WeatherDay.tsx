@@ -37,8 +37,11 @@ export default class WeatherDay extends React.Component<WeatherDayProps, Weather
 
 
                 </Text>
-
-                <WeatherIcon weatherID={Number.parseInt((this.props.dayJSON as any).code)} />
+                <View style={{ alignSelf: 'center' }}>
+                    <WeatherIcon
+                        weatherID={Number.parseInt((this.props.dayJSON as any).code)}
+                    />
+                </View>
 
                 <View style={styles.tempsView}>
                     <Text style={styles.highText} >

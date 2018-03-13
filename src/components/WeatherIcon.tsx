@@ -7,29 +7,29 @@ export interface WeatherIconProps {
 
 export interface WeatherIconState { }
 
-const blowingsnow = require('../icons/weather/blowing-snow.png');
-const cloudy = require('../icons/weather/cloudy.png');
-const drizzle = require('../icons/weather/drizzle.png');
-const fair = require('../icons/weather/fair.png');
-const flurries = require('../icons/weather/flurries.png');
-const fog = require('../icons/weather/fog.png');
-const freezingrain = require('../icons/weather/freezing-rain.png');
-const hazy = require('../icons/weather/hazy.png');
-const mcloudynight = require('../icons/weather/m-cloudy-night.png');
-const mcloudy = require('../icons/weather/m-cloudy.png');
-const pcnight = require('../icons/weather/p-c-night.png');
-const pcrain = require('../icons/weather/p-c-rain.png');
-const rainysnow = require('../icons/weather/rainy-snow.png');
-const rainy = require('../icons/weather/rainy.png');
-const showers = require('../icons/weather/showers.png');
-const sleet = require('../icons/weather/sleet.png');
-const smoke = require('../icons/weather/smoke.png');
-const snowshower = require('../icons/weather/snow-shower.png');
-const snow = require('../icons/weather/snow.png');
-const sunny = require('../icons/weather/sunny.png');
-const tstormrain = require('../icons/weather/t-storm-rain.png');
-const thunderstorm = require('../icons/weather/thunder-storm.png');
-const wind = require('../icons/weather/wind.png');
+const blowingsnow = require('../icons/weather2/20.png');
+const cloudy = require('../icons/weather2/03.png');
+const drizzle = require('../icons/weather2/10.png');
+const fair = require('../icons/weather2/04.png');
+const flurries = require('../icons/weather2/23.png');
+const fog = require('../icons/weather2/09.png');
+const freezingrain = require('../icons/weather2/10.png');
+const hazy = require('../icons/weather2/05.png');
+const mcloudynight = require('../icons/weather2/34.png');
+const mcloudy = require('../icons/weather2/06.png');
+const pcnight = require('../icons/weather2/31.png');
+const pcrain = require('../icons/weather2/11.png');
+const rainysnow = require('../icons/weather2/25.png');
+const rainy = require('../icons/weather2/16.png');
+const showers = require('../icons/weather2/10.png');
+const sleet = require('../icons/weather2/25.png');
+const smoke = require('../icons/weather2/41.png');
+const snowshower = require('../icons/weather2/22.png');
+const snow = require('../icons/weather2/23.png');
+const sunny = require('../icons/weather2/01.png');
+const tstormrain = require('../icons/weather2/13.png');
+const thunderstorm = require('../icons/weather2/13.png');
+const wind = require('../icons/weather2/41.png');
 
 let json = {
     0: thunderstorm, //'tornado'

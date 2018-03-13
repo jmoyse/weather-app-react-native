@@ -34,7 +34,7 @@ const high = require('../icons/system/ic_file_upload_white_24dp_1x.png');
 const styles = StyleSheet.create({
 
     container: {
-        backgroundColor: '#0000007f',
+        backgroundColor: '#0000006f',
         alignSelf: 'center',
         padding: 10,
         width: '95%',
@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         color: 'white',
         marginBottom: 10,
-        fontWeight: 'bold'
 
     }
 });
