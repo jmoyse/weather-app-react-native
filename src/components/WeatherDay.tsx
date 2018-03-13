@@ -9,16 +9,33 @@ interface WeatherDayProps {
 interface WeatherDayState { }
 
 export default class WeatherDay extends React.Component<WeatherDayProps, WeatherDayState> {
+
     constructor (props: WeatherDayProps) {
         super(props);
-
     }
+    //days = [{ "Sun": "Sunday" }, { "Mon": "Monday" }, { "Tues": "Tuesday" }, { "Weds": "Wednesday" }, { "Thurs": "Thursday" }, { "Fri": "Friday" }, { "Sat": "Saturday" }];
+
+    //days2 = [{ "Sun": "Sunday" }, { "Mon": "Monday" }, { "Tues": "Tuesday" }, { "Weds": "Wednesday" }, { "Thurs": "Thursday" }, { "Fri": "Friday" }, { "Sat": "Saturday" }];
+
+    protected dayTable: { [name: string]: string } = {
+        'Mon': 'Monday',
+        'Tue': 'Tuesday',
+        'Wed': 'Wednesday',
+        'Thu': 'Thursday',
+        'Fri': 'Friday',
+        'Sat': 'Saturday',
+        'Sun': 'Sunday'
+    };
 
     render () {
         return (
             <View style={styles.container}>
                 <Text style={styles.dayText} >
-                    {(this.props.dayJSON as any).day}
+                    {
+                        this.dayTable[((this.props.dayJSON as any).day as string)]
+                    }
+
+
                 </Text>
 
                 <WeatherIcon weatherID={Number.parseInt((this.props.dayJSON as any).code)} />
@@ -40,18 +57,20 @@ const styles = StyleSheet.create({
     lowText: {
         fontFamily: 'HelveticaNeueLTStd_Th',
         fontSize: 15,
-        color: '#8FBFE8'
+        color: '#8FBFE8',
+        fontWeight: 'bold',
     },
     highText: {
         fontFamily: 'HelveticaNeueLTStd_Th',
         fontSize: 15,
         color: 'white',
-        paddingRight: 15
+        paddingRight: 15,
+        fontWeight: 'bold',
     },
     dayText: {
-        fontFamily: 'HelveticaNeueLTStd_Th',
+        fontFamily: 'HelveticaNeueLTStd_Lt',
         fontSize: 15,
-        textAlign: 'center',
+        textAlign: 'left',
         color: 'white',
         width: 100
     },
@@ -60,18 +79,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     container: {
-        //paddingTop: 5,
-        //paddingLeft: 10,
-        //paddingRight: 10,
-
-        //height: 150,
-
         display: 'flex',
         flexDirection: 'row',
-        //width: '100%',
         alignContent: 'center',
         alignItems: 'center',
-        //alignItems: 'center',
         justifyContent: 'space-between',
     },
 });

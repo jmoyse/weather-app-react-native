@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, TextInput, Image, ViewPagerAndroid, StatusBar, ToolbarAndroid, WebView } from 'react-native';
 import ForecastBox from '../components/ForecastBox';
+import SubSection from '../components/SubSection';
+import WeatherDay from '../components/WeatherDay';
 
 interface ForecastProps {
     forecastJson: Object;
@@ -14,18 +16,20 @@ export default class Forecast extends React.Component<ForecastProps, ForecastSta
     }
     render () {
         return (
-            <View style={styles.container}>
+            <SubSection title="Forecast" >
+                <View style={styles.container}>
+                    {
+                        (this.props.forecastJson as any) ?
+                            (
+                                (this.props.forecastJson as any).results.channel.item.forecast.map(dayNode =>
+                                    <WeatherDay key={((dayNode as any).date as string)} dayJSON={dayNode} />
+                                )
+                            ) : <Text> N/A </Text>
 
-                <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignContent: 'center' }} >
-
-                    <ForecastBox forecastJson={
-                        (this.props.forecastJson as any) !== undefined ?
-                            (this.props.forecastJson as any).results.channel.item.forecast :
-                            undefined}
-                    />
-
+                    }
                 </View>
-            </View >
+            </SubSection>
+
 
         );
     }
@@ -33,7 +37,7 @@ export default class Forecast extends React.Component<ForecastProps, ForecastSta
 
 
 const background = require('../backgrounds/city-background-1.jpg');
-const background2 = require('../backgrounds/city-background-2.jpeg');
+const background2 = require('../backgrounds/city-background-2.jpg');
 const background3 = require('../backgrounds/city-background-4.jpg');
 
 
@@ -41,8 +45,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'rgba(0,0,0,0)',
-        alignItems: 'flex-start',
-        justifyContent: 'flex-end',
         width: '100%'
     },
 

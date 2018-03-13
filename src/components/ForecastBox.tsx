@@ -20,30 +20,27 @@ export default class ForecastBox extends React.Component<ForecastBoxProps, Forec
 
     render () {
         return (
-            <SubSection>
-                <View style={styles.container}>
-                    <Text style={{ fontSize: 15, textAlign: 'left', color: 'white' }} >
-                        Forecast
-                    </Text>
-                    {
-                        (this.props.forecastJson as any) ?
-                            (
-                                (this.props.forecastJson as any).map(dayNode =>
-                                    <WeatherDay key={((dayNode as any).date as string)} dayJSON={dayNode} />
-                                )
-                            ) : <Text> N/A </Text>
 
-                    }
-                </View>
-            </SubSection >
+            <View style={styles.container}>
+                {
+                    (this.props.forecastJson as any) ?
+                        (
+                            (this.props.forecastJson as any).map(dayNode =>
+                                <WeatherDay key={((dayNode as any).date as string)} dayJSON={dayNode} />
+                            )
+                        ) : <Text> N/A </Text>
+
+                }
+            </View>
+
         );
     }
 }
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#0000007f',
-        margin: 10,
-        padding: 10,
+        //backgroundColor: '#0000007f',
+        //margin: 10,
+        //padding: 10,
     },
 });

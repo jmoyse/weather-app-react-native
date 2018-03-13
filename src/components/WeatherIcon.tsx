@@ -91,6 +91,7 @@ class WeatherIcon extends React.Component<WeatherIconProps, WeatherIconState> {
         return (
             <Image
                 style={styles.image}
+
                 source={this.props.weatherID >= 0 ? json[this.props.weatherID] : ''}
             />
         );

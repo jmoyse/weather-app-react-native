@@ -5,6 +5,11 @@ import ForecastBox from './components/ForecastBox';
 import HeaderBar from './views/HeaderBar';
 import HomeWeather from './views/HomeWeather';
 import Forecast from './views/Forecast';
+import Precipitation from './views/Precipitation';
+import DetailedWeather from './views/DetailedWeather';
+import SunMoon from './views/SunMoon';
+import WindPressure from './views/WindPressure';
+import WeatherMap from './views/WeatherMap';
 
 
 export interface WeatherAppProps { }
@@ -76,7 +81,18 @@ export default class App extends React.Component<WeatherAppProps, WeatherAppStat
                         <ScrollView>
                             <HomeWeather forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
                             <Forecast forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
+
+                            <DetailedWeather forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
+
+                            <SunMoon forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
+                            <WindPressure forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
+                            <Precipitation forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
+                            <WeatherMap forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
+
                         </ScrollView>
+                    </View>
+                    <View>
+                        <Text>Not Yet Implemented </Text>
                     </View>
                 </ViewPagerAndroid>
             </View>
