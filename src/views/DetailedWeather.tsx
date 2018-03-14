@@ -103,7 +103,7 @@ export default class DetailedWeather extends React.Component<DetailedWeatherProp
 
                             (this.props.forecastJson as any) !== undefined ?
                                 ((this.props.forecastJson as any).results.channel.item.description) : ''
-                                
+
                             */
                         }
 

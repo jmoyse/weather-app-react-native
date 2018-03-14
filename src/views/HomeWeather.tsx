@@ -70,16 +70,16 @@ export default class HomeWeather extends React.Component<HomeWeatherProps, HomeW
                         {(this.props.forecastJson as any) !== undefined ? this.capitolizeFirstChar((this.props.forecastJson as any).results.channel.item.condition.text) : ''}
                     </Text>
                 </View>
-                <View style={{ direction: 'ltr', flexDirection: 'row', paddingLeft: 12, }}>
-                    <Image source={high} />
+                <View style={{ direction: 'ltr', flexDirection: 'row', paddingLeft: 12, justifyContent: 'flex-start' }}>
+                    <Image source={high} style={{ height: 20, width: 20 }} />
 
-                    <Text style={styles.highlowText}>
+                    <Text style={styles.highText}>
                         {(this.props.forecastJson as any) !== undefined ? (this.props.forecastJson as any).results.channel.item.forecast[0].high + '°' : ''}
                     </Text>
 
-                    <Image source={low} />
+                    <Image source={low} style={{ height: 20, width: 20 }} />
 
-                    <Text style={styles.highlowText} >
+                    <Text style={styles.lowText} >
                         {(this.props.forecastJson as any) !== undefined ? (this.props.forecastJson as any).results.channel.item.forecast[0].low + '°' : ''}
                     </Text>
 
@@ -98,8 +98,8 @@ export default class HomeWeather extends React.Component<HomeWeatherProps, HomeW
     }
 }
 
-const low = require('../icons/system/ic_file_download_white_24dp_1x.png');
-const high = require('../icons/system/ic_file_upload_white_24dp_1x.png');
+const low = require('../icons/system/ic_keyboard_arrow_down_white_24dp_2x.png');
+const high = require('../icons/system/ic_keyboard_arrow_up_white_24dp_2x.png');
 
 
 const styles = StyleSheet.create({
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
         fontFamily: 'HelveticaNeueLTStd_Th',
     },
 
-    highlowText: {
+    highText: {
         color: 'white',
         fontSize: 20,
 
@@ -136,7 +136,22 @@ const styles = StyleSheet.create({
         textShadowRadius: 2,
         //fontFamily: 'assets/fonts/nunito_sans_v3_latin_200.ttf',
         fontFamily: 'HelveticaNeueLTStd_Th',
+
+        marginRight: 20,
     },
+    lowText: {
+        color: '#8FBFE8',
+        fontSize: 20,
+
+        textShadowColor: 'black',
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 2,
+        //fontFamily: 'assets/fonts/nunito_sans_v3_latin_200.ttf',
+        fontFamily: 'HelveticaNeueLTStd_Th',
+
+
+    },
+
     currentTempText: {
         color: 'white',
         fontSize: 100,

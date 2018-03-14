@@ -1,5 +1,8 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, TextInput, Image, ViewPagerAndroid, StatusBar, ToolbarAndroid, WebView } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image, ViewPagerAndroid, StatusBar, TouchableOpacity, ToolbarAndroid, WebView } from 'react-native';
+import { store, WeatherAppStore } from '../store/WeatherAppStore';
+import { setLocationWindowVisible } from '../actions/ShowNewLocationAction';
+import { connect } from 'react-redux';
 
 interface HeaderBarProps {
     forecastJson: Object;
@@ -41,7 +44,9 @@ export default class HeaderBar extends React.Component<HeaderBarProps, HeaderBar
                         </Text>
                     </View>
 
-                    <Image source={plusIcon} />
+                    <TouchableOpacity onPress={() => { store.dispatch(setLocationWindowVisible(true)) }} accessibilityLabel="Show 5 day forecast" style={{ paddingRight: 5 }} >
+                        <Image source={plusIcon} />
+                    </TouchableOpacity>
 
                 </View>
             </View>

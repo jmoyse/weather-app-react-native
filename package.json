@@ -28,9 +28,13 @@
     "bundle": "react-native bundle --dev false --platform android --entry-file index.js --bundle-output ./android/app/build/intermediates/assets/debug/index.android.bundle --assets-dest ./android/app/build/intermediates/res/merged/debug"
   },
   "dependencies": {
+    "@types/react-redux": "^5.0.15",
+    "@types/redux": "^3.6.0",
     "react": "16.2.0",
     "react-native": "0.53.3",
-    "react-native-hamburger": "0.0.2"
+    "react-native-hamburger": "0.0.2",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2"
   },
   "rnpm": {
     "assets": [
