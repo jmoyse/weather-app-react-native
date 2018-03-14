@@ -1,7 +1,11 @@
 import * as React from 'react';
-import { StyleSheet, Text, Button, View, ScrollView, TextInput, Image, TouchableOpacity, ViewPagerAndroid, StatusBar, ToolbarAndroid, WebView } from 'react-native';
-import WeatherDay from './components/WeatherDay';
-import ForecastBox from './components/ForecastBox';
+import { StyleSheet, Text, View, ScrollView, Image, ViewPagerAndroid, DrawerLayoutAndroid, Button, ViewPagerAndroidStatic } from 'react-native';
+import { store, WeatherAppStore } from './store/WeatherAppStore';
+import { Provider, connect } from 'react-redux';
+import AddNewLocation from './views/AddNewLocation';
+
+import SubSection from './components/SubSection';
+import HamburgerMenu from './components/HamburgerMenu';
 import HeaderBar from './views/HeaderBar';
 import HomeWeather from './views/HomeWeather';
 import Forecast from './views/Forecast';
@@ -10,9 +14,6 @@ import DetailedWeather from './views/DetailedWeather';
 import SunMoon from './views/SunMoon';
 import WindPressure from './views/WindPressure';
 import WeatherMap from './views/WeatherMap';
-import AddNewLocation from './views/AddNewLocation';
-import { store, WeatherAppStore } from './store/WeatherAppStore';
-import { Provider, connect } from 'react-redux';
 
 
 type ClassNames = keyof typeof styles;
@@ -32,12 +33,14 @@ export interface WeatherAppProps {
 export interface WeatherAppState {
     zipcode: number;
     json: Object;
+    drawerVisible: boolean;
 }
 
 const background = require('./backgrounds/city-background-1.jpg');
 const background2 = require('./backgrounds/city-background-2.jpg');
 const background3 = require('./backgrounds/city-background-4.jpg');
 const plusIcon = require('./icons/system/ic_plus_white_24dp.png');
+const yahoo = require('./icons/yahoo.png');
 
 class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
     private UPDATE_TIME_IN_MS: number = 60 * 1000; // update time in seconds
@@ -45,7 +48,7 @@ class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
 
     constructor (props: WeatherAppProps) {
         super(props);
-        this.state = { zipcode: 0, json: new Object() };
+        this.state = { zipcode: 0, json: new Object(), drawerVisible: false };
         this.updateTimer = window.setInterval(() => this.onTimerTick(this.UPDATE_TIME_IN_MS), 1000);
     }
 
@@ -77,15 +80,30 @@ class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
             if (response.ok) {
                 response.json().then(function (jsonResult: any, ) {
                     this.setState({ json: jsonResult.query });
-                }.bind(this));
+                }.bind(this))
+
+
                 return;
             }
         });
     }
 
+
+    /*
+    navigationView = (
+        
+    );
+    */
+
     render () {
         return (
-            <Provider store={store}>
+            <DrawerLayoutAndroid
+                drawerWidth={300}
+                drawerPosition={DrawerLayoutAndroid.positions.Left}
+                renderNavigationView={() => <HamburgerMenu />}
+                ref={'MENU'}
+            >
+
                 <View style={styles.container} >
 
                     <Image
@@ -118,6 +136,8 @@ class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
                                     */
                                 }
 
+                                <Button title="press me" onPress={() => { (this.refs['MENU'] as any).openDrawer() }} />
+
 
                                 <HomeWeather forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
                                 <Forecast forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
@@ -136,7 +156,10 @@ class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
                                     */
                                 }
                                 <SunMoon forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
-
+                                <SubSection>
+                                    <Text style={styles.text}>Data Provided by: </Text>
+                                    <Image source={yahoo} />
+                                </SubSection>
                             </ScrollView>
                         </View>
                         <View>
@@ -145,7 +168,11 @@ class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
                     </ViewPagerAndroid>
 
                 </View>
-            </Provider>
+
+            </DrawerLayoutAndroid>
+
+
+
         );
     }
 }
@@ -163,6 +190,12 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%'
     },
+    text: {
+        color: 'white',
+        textAlign: 'left',
+        fontFamily: 'HelveticaNeueLTStd_Lt',
+        fontSize: 12,
+    }
 });
 
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Dimensions, Text, View, TextInput, Image, ViewPagerAndroid, StatusBar, ToolbarAndroid, WebView } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 interface SubSectionProps {
     title?: string
@@ -20,11 +20,15 @@ export default class SubSection extends React.Component<SubSectionProps, SubSect
                         {this.props.title}
                     </Text> :
                     <Text></Text>
+
+                }
+                {this.props.title && this.props.title.length > 0 ?
+                    <View
+                        style={styles.line}
+                    /> : <View />
                 }
 
-                <View
-                    style={styles.line}
-                />
+
                 <View style={{ marginBottom: 10 }}>
                 </View>
                 {this.props.children}

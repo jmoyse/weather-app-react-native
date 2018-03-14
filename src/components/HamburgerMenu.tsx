@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, DrawerLayoutAndroid } from 'react-native';
 import SubSection from './SubSection';
 
 interface HamburgerMenuProps {
-    forecastJson: Object;
+
 }
 
 interface HamburgerMenuState { }
@@ -19,6 +19,7 @@ export default class HamburgerMenu extends React.Component<HamburgerMenuProps, H
     render () {
         return (
             <SubSection>
+
                 <Text style={{ color: 'white' }}> Work in progress </Text>
             </SubSection>
         );

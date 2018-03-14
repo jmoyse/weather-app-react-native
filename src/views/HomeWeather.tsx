@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Dimensions, Text, View, TextInput, Image, ViewPagerAndroid, StatusBar, ToolbarAndroid, WebView } from 'react-native';
+import { StyleSheet, Dimensions, Text, View, TextInput, Image, StatusBar, ToolbarAndroid, WebView } from 'react-native';
 import WeatherIcon from '../components/WeatherIcon';
 interface HomeWeatherProps {
     forecastJson: Object;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, TextInput, Image, ViewPagerAndroid, StatusBar, TouchableOpacity, ToolbarAndroid, WebView } from 'react-native';
+import { StyleSheet, Text, View, Image, StatusBar, TouchableOpacity, } from 'react-native';
 import { store, WeatherAppStore } from '../store/WeatherAppStore';
 import { setLocationWindowVisible } from '../actions/ShowNewLocationAction';
 import { connect } from 'react-redux';
