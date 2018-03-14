@@ -21,6 +21,12 @@ export default class SubSection extends React.Component<SubSectionProps, SubSect
                     </Text> :
                     <Text></Text>
                 }
+
+                <View
+                    style={styles.line}
+                />
+                <View style={{ marginBottom: 10 }}>
+                </View>
                 {this.props.children}
             </View>
         );
@@ -36,7 +42,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#0000006f',
         alignSelf: 'center',
-        padding: 10,
+        padding: 15,
         width: '95%',
         display: 'flex',
         justifyContent: 'space-between',
@@ -51,5 +57,9 @@ const styles = StyleSheet.create({
         color: 'white',
         marginBottom: 10,
 
+    },
+    line: {
+        borderBottomColor: '#A8A7A6',
+        borderBottomWidth: 1,
     }
 });

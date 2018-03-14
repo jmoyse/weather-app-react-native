@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import SubSection from '../components/SubSection';
 
 interface WindPressureProps {
@@ -7,7 +7,7 @@ interface WindPressureProps {
 }
 
 interface WindPressureState { }
-
+const windmill = require('../icons/windmill.png');
 export default class WindPressure extends React.Component<WindPressureProps, WindPressureState> {
     constructor (props: WindPressureProps) {
         super(props);
@@ -16,33 +16,87 @@ export default class WindPressure extends React.Component<WindPressureProps, Win
         console.log(newProps);
     }
 
+    getCardinalDirection (angle: number) { // snagged from: https://gist.github.com/basarat/4670200
+        if (typeof angle === 'string') angle = parseInt(angle);
+        if (angle <= 0 || angle > 360 || typeof angle === 'undefined')
+            return '☈';
+        const arrows = { north: 'N ↑', north_east: 'NE ↗', east: 'E → ', south_east: 'SE ↘ ', south: 'S ↓', south_west: 'SW ↙', west: 'W ←', north_west: 'NW ↖' };
+        const directions = Object.keys(arrows);
+        const degree = 360 / directions.length;
+        angle = angle + degree / 2;
+        for (let i = 0; i < directions.length; i++) {
+            if (angle >= (i * degree) && angle < (i + 1) * degree)
+                return arrows[directions[i]];
+        }
+        return arrows['north'];
+    }
+
+
     render () {
         return (
             <SubSection title="Wind & Pressure">
-                <Text
-                    style={styles.text}>
-                    Chill =>
+                <View style={{ position: 'relative', top: '40%' }}>
+                    <View
+                        style={styles.line}
+                    />
+                </View>
+                <View style={{ flex: 1, height: '100%', width: '100%', flexDirection: 'row' }} >
+                    <Image source={windmill} style={{ height: 100, width: 100 }} resizeMode="contain" />
+
                     {
-                        (this.props.forecastJson as any) !== undefined ?
-                            ((this.props.forecastJson as any).results.channel.wind.chill) : ''
+                        /*
+                           <Text
+                       
+                               style={styles.text}>
+                               Chill =>
+                       {
+                                   (this.props.forecastJson as any) !== undefined ?
+                                       ((this.props.forecastJson as any).results.channel.wind.chill) : ''
+                               }
+                           </Text>
+                           */
                     }
-                </Text>
-                <Text
-                    style={styles.text}>
-                    Direction =>
+                    {/*
+                    <Text
+                        style={styles.text}>
+                        Direction =>
                     {
-                        (this.props.forecastJson as any) !== undefined ?
-                            ((this.props.forecastJson as any).results.channel.wind.direction) : ''
+                            (this.props.forecastJson as any) !== undefined ?
+                                ((this.props.forecastJson as any).results.channel.wind.direction) : ''
+                        }
+                    </Text>
+                    */
                     }
-                </Text>
-                <Text
-                    style={styles.text}>
-                    Speed =>
-                    {
-                        (this.props.forecastJson as any) !== undefined ?
-                            ((this.props.forecastJson as any).results.channel.wind.speed) : ''
-                    }
-                </Text>
+
+
+
+                    <View style={{ padding: 2 }}>
+
+                        <Text
+                            style={styles.text}>
+                            Wind
+                        </Text>
+                        <View style={{ flex: 1, flexDirection: 'row', alignItems: 'baseline' }}>
+                            <Text style={styles.textNumbers}>
+                                {
+                                    (this.props.forecastJson as any) !== undefined ?
+
+                                        ((this.props.forecastJson as any).results.channel.wind.speed) + ' ' : ''
+
+                                }
+                            </Text>
+
+                            <Text style={styles.text}>
+                                {
+                                    (this.props.forecastJson as any) !== undefined ?
+                                        ((this.props.forecastJson as any).results.channel.units.speed) + ' ' +
+                                        this.getCardinalDirection(Number.parseFloat((this.props.forecastJson as any).results.channel.wind.direction))
+                                        : ''
+                                }
+                            </Text>
+                        </View>
+                    </View>
+                </View>
             </SubSection>
         );
     }
@@ -50,6 +104,22 @@ export default class WindPressure extends React.Component<WindPressureProps, Win
 
 const styles = StyleSheet.create({
     text: {
-        color: 'white'
+        color: 'white',
+        textAlign: 'left',
+        fontFamily: 'HelveticaNeueLTStd_Lt',
+        fontSize: 10,
+    },
+
+    textNumbers: {
+        color: 'white',
+        textAlign: 'left',
+        fontFamily: 'HelveticaNeueLTStd_Lt',
+        fontSize: 13,
+    },
+    line: {
+        borderBottomColor: '#EFEFEC64',
+        borderBottomWidth: 1,
+        marginTop: 5,
+        marginBottom: 5,
     },
 });

@@ -70,7 +70,7 @@ export default class App extends React.Component<WeatherAppProps, WeatherAppStat
             <View style={styles.container} >
                 <Image
                     style={styles.backgroundImage}
-                    source={background3}
+                    source={background}
                     blurRadius={0.1}
                 />
 
@@ -84,10 +84,19 @@ export default class App extends React.Component<WeatherAppProps, WeatherAppStat
 
                             <DetailedWeather forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
 
-                            <SunMoon forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
+
                             <WindPressure forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
+                            {
+                                /*
                             <Precipitation forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
-                            <WeatherMap forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
+                            */
+                            }
+                            {
+                                /*
+                                <WeatherMap forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
+                                */
+                            }
+                            <SunMoon forecastJson={(this.state.json as any).results ? (this.state.json as any) : undefined} />
 
                         </ScrollView>
                     </View>

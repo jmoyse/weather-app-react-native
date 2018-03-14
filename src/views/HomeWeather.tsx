@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, Dimensions, Text, View, TextInput, Image, ViewPagerAndroid, StatusBar, ToolbarAndroid, WebView } from 'react-native';
-
+import WeatherIcon from '../components/WeatherIcon';
 interface HomeWeatherProps {
     forecastJson: Object;
 }
@@ -57,11 +57,20 @@ export default class HomeWeather extends React.Component<HomeWeatherProps, HomeW
                 height: this.state.windowHeight - 100,
             }}
             >
+                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', paddingLeft: 10, }}>
+                    <View style={{ width: 20, height: 20 }}>
+                        {
+                            (this.props.forecastJson as any) !== undefined ?
+                                <WeatherIcon weatherID={(this.props.forecastJson as any).results.channel.item.condition.code} />
+                                : <View />
+                        }
+                    </View>
 
-                <Text style={styles.conditionsText}>
-                    {(this.props.forecastJson as any) !== undefined ? this.capitolizeFirstChar((this.props.forecastJson as any).results.channel.item.condition.text) : ''}
-                </Text>
-                <View style={{ direction: 'ltr', flexDirection: 'row', paddingLeft: 20, }}>
+                    <Text style={styles.conditionsText}>
+                        {(this.props.forecastJson as any) !== undefined ? this.capitolizeFirstChar((this.props.forecastJson as any).results.channel.item.condition.text) : ''}
+                    </Text>
+                </View>
+                <View style={{ direction: 'ltr', flexDirection: 'row', paddingLeft: 12, }}>
                     <Image source={high} />
 
                     <Text style={styles.highlowText}>

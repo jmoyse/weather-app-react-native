@@ -37,10 +37,10 @@ export default class WeatherDay extends React.Component<WeatherDayProps, Weather
 
 
                 </Text>
-                <View style={{ alignSelf: 'center' }}>
-                    <WeatherIcon
-                        weatherID={Number.parseInt((this.props.dayJSON as any).code)}
-                    />
+                <View style={styles.weatherIcon}>
+
+                    <WeatherIcon weatherID={Number.parseInt((this.props.dayJSON as any).code)} />
+
                 </View>
 
                 <View style={styles.tempsView}>
@@ -61,14 +61,14 @@ const styles = StyleSheet.create({
         fontFamily: 'HelveticaNeueLTStd_Th',
         fontSize: 15,
         color: '#8FBFE8',
-        fontWeight: 'bold',
+        //fontWeight: 'bold',
     },
     highText: {
         fontFamily: 'HelveticaNeueLTStd_Th',
         fontSize: 15,
         color: 'white',
         paddingRight: 15,
-        fontWeight: 'bold',
+        //fontWeight: 'bold',
     },
     dayText: {
         fontFamily: 'HelveticaNeueLTStd_Lt',
@@ -87,5 +87,17 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         alignItems: 'center',
         justifyContent: 'space-between',
+        height: 30,
     },
+    weatherIcon: {
+        position: 'absolute',
+        width: '100%',
+        //display: 'flex',
+        alignSelf: 'center',
+        alignContent: 'center',
+        alignItems: 'center',
+
+
+
+    }
 });

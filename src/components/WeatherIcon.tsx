@@ -89,9 +89,9 @@ class WeatherIcon extends React.Component<WeatherIconProps, WeatherIconState> {
 
     render () {
         return (
+
             <Image
                 style={styles.image}
-
                 source={this.props.weatherID >= 0 ? json[this.props.weatherID] : ''}
             />
         );
@@ -100,9 +100,13 @@ class WeatherIcon extends React.Component<WeatherIconProps, WeatherIconState> {
 
 const styles = StyleSheet.create({
     image: {
-        padding: 20,
-        height: 30,
-        width: 30,
+        padding: 15,
+        //height: 'fit',
+        //width: 'auto',
+        flex: 1,
+        //alignSelf: 'stretch',
+        width: undefined,
+        height: undefined
     },
 });
 
