@@ -5,13 +5,14 @@ import { WeatherAppStore } from '../store/WeatherAppStore';
 export default function addLocationReducer (currentState: WeatherAppStore.LocationStore, action: AddLocationAction | any): WeatherAppStore.LocationStore {
     if (currentState === undefined) {
         currentState = {
-            locations: new Array<String>()
+            //locations: new Array<String>()
+            locations: ['2487889', '21044']
         };
     }
 
     switch (action.type) {
         case ADD_LOCATION:
-            return { locations: [action.location, ...currentState.locations] };
+            return { locations: [...currentState.locations, action.location] };
         case REMOVE_LOCATION:
             let newLocations = [...currentState.locations];
             let index = newLocations.indexOf(action.location);

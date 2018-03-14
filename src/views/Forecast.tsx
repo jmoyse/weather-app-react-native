@@ -19,10 +19,6 @@ export default class Forecast extends React.Component<ForecastProps, ForecastSta
         this.state = ({ showExtendedForecast: false });
     }
 
-    toggleExtendedView () {
-        ;
-    }
-
     render () {
         return (
             <SubSection title="Forecast" >
@@ -65,10 +61,6 @@ export default class Forecast extends React.Component<ForecastProps, ForecastSta
     }
 }
 
-
-const background = require('../backgrounds/city-background-1.jpg');
-const background2 = require('../backgrounds/city-background-2.jpg');
-const background3 = require('../backgrounds/city-background-4.jpg');
 
 
 const styles = StyleSheet.create({
