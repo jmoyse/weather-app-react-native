@@ -106,10 +106,11 @@ export default class WeatherLocation extends React.Component<WeatherLocationProp
                     source={backgrounds[this.selectedBackground]}
                     blurRadius={0.1}
                 />
+                <HeaderBar forecastJson={(this.state.forecastJson as any).results ? (this.state.forecastJson as any).results : undefined} />
                 <ScrollView>
 
 
-                    <HeaderBar forecastJson={(this.state.forecastJson as any).results ? (this.state.forecastJson as any).results : undefined} />
+
 
 
                     {

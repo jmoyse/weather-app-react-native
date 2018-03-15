@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         display: 'flex', flexDirection: 'column', alignContent: 'center', justifyContent: 'center', alignItems: 'center', paddingTop: 5, paddingBottom: 5
     },
     locationText: {
-        width: 100,
+        width: 200,
         color: 'white',
         fontSize: 16,
         fontWeight: '300',
