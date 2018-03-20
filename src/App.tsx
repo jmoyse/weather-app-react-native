@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, ViewPagerAndroid, DrawerLayoutAndroid, Button, ViewPagerAndroidStatic, NativeSyntheticEvent, ViewPagerAndroidOnPageSelectedEventData } from 'react-native';
+import { Platform, StyleSheet, Text, View, ScrollView, Image, ViewPagerAndroid, DrawerLayoutAndroid, Button, ViewPagerAndroidStatic, NativeSyntheticEvent, ViewPagerAndroidOnPageSelectedEventData } from 'react-native';
 import { store, WeatherAppStore } from './store/WeatherAppStore';
 import { Provider, connect } from 'react-redux';
 import AddNewLocation from './views/AddNewLocation';
@@ -88,38 +88,62 @@ class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
 
     render () {
         return (
-            <DrawerLayoutAndroid
-                drawerWidth={300}
-                drawerPosition={DrawerLayoutAndroid.positions.Left}
-                renderNavigationView={() => <HamburgerMenu />}
-                ref={'MENU'}
-            >
-
-                <View style={styles.container} >
-
-                    <AddNewLocation />
-
-                    <ViewPagerAndroid
-                        style={styles.viewPager}
-                        initialPage={0}
-                        onPageSelected={(event) => { }}
-                    >
-                        {
-                            this.props.locations ? this.props.locations.map(location =>
-                                <View key={location.toString()}>
-                                    <WeatherLocation zipcode={Number.parseInt(location.toString())} />
-                                </View>
-                            ) : <View />
-                        }
 
 
-                    </ViewPagerAndroid>
 
-                </View>
+            <View style={{ height: '100%' }}>
 
-            </DrawerLayoutAndroid>
+                {
+                    (Platform.OS === 'android') ?
+                        /* TODO: this is insanely messy. fix this */
+
+                        <DrawerLayoutAndroid
+                            drawerWidth={300}
+                            drawerPosition={DrawerLayoutAndroid.positions.Left}
+                            renderNavigationView={() => <HamburgerMenu />}
+                            ref={'MENU'}
+                        >
 
 
+                            <View style={styles.container} >
+                                <AddNewLocation />
+
+                                <ViewPagerAndroid
+                                    style={styles.viewPager}
+                                    initialPage={0}
+                                    onPageSelected={(event) => { }}
+                                >
+                                    {
+                                        this.props.locations ? this.props.locations.map(location =>
+                                            <View key={location.toString()}>
+                                                <WeatherLocation zipcode={Number.parseInt(location.toString())} />
+                                            </View>
+                                        ) : <View />
+                                    }
+
+
+                                </ViewPagerAndroid>
+                            </View>
+
+                        </DrawerLayoutAndroid>
+
+                        :
+
+                        <View style={styles.container} >
+                            <AddNewLocation />
+
+
+                            {
+                                this.props.locations ? this.props.locations.map(location =>
+                                    <View key={location.toString()}>
+                                        <WeatherLocation zipcode={Number.parseInt(location.toString())} />
+                                    </View>
+                                ) : <View />
+                            }
+                        </View>
+                }
+
+            </View>
 
         );
     }

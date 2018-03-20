@@ -7,7 +7,6 @@ import WeatherDay from '../components/WeatherDay';
 interface ForecastProps {
     forecastJson: Object;
 }
-
 interface ForecastState {
     showExtendedForecast: boolean;
 }

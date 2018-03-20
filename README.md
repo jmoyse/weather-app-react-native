@@ -19,7 +19,7 @@ Uses the following technologies:
 ## Installation
 1. Run `npm install`
 2. Run `npm start`
-3. Run `npm run android`
+3. Run `npm run android` or npm run windows
 4. Metro bundler runs on port localhost:8081. Point a emulator or phone to the address to run.
 
 ## Publishing

@@ -27,6 +27,9 @@ yarn-error.log*
 # ios build
 /ios
 
+# ios build
+/windows
+
 # testing
 /coverage
 

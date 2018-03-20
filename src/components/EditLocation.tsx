@@ -28,20 +28,20 @@ class HamburgerMenuRedux extends React.Component<HamburgerMenuProps, HamburgerMe
     render () {
         return (
             <View style={styles.container} >
-                <View style={styles.selectRow}>
+                <View style={{ backgroundColor: 'black', width: '100%', height: 30 }}>
                     <Text style={{ color: 'white', paddingLeft: 10, paddingTop: 5, }}>
                         Locations
                     </Text>
                 </View>
-                <View style={styles.locationRow}>
-                    <Image source={edit_location} style={styles.iconImage} />
-                    <Text style={styles.text} >
+                <View style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
+                    <Image source={edit_location} style={{ margin: 5 }} />
+                    <Text style={{ color: 'white' }} >
                         Edit Locations
                     </Text>
                 </View>
-                <View style={styles.locationRow}>
-                    <Image source={pin_drop} style={styles.iconImage} />
-                    <Text style={styles.text} >
+                <View style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
+                    <Image source={pin_drop} style={{ margin: 5 }} />
+                    <Text style={{ color: 'white' }} >
                         Current Location
                     </Text>
                 </View>
@@ -50,9 +50,9 @@ class HamburgerMenuRedux extends React.Component<HamburgerMenuProps, HamburgerMe
                     this.props.locations.map(location =>
                         <View
                             key={Math.random() * 10000}
-                            style={styles.locationRow}>
-                            <Image source={pin_drop} style={styles.iconImage} />
-                            <Text style={styles.text} >
+                            style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
+                            <Image source={pin_drop} style={{ margin: 5 }} />
+                            <Text style={{ color: 'white' }} >
                                 {location}
                             </Text>
                         </View>
@@ -60,35 +60,35 @@ class HamburgerMenuRedux extends React.Component<HamburgerMenuProps, HamburgerMe
 
                     )
                 }
-                <View style={styles.selectRow}>
+                <View style={{ backgroundColor: 'black', width: '100%', height: 30 }}>
                     <Text style={{ color: 'white', paddingLeft: 10, paddingTop: 5, }}>
                         Tools
                     </Text>
                 </View>
-                <View style={styles.locationRow}>
-                    <Image source={pin_drop} style={styles.iconImage} />
-                    <Text style={styles.text} >
+                <View style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
+                    <Image source={pin_drop} style={{ margin: 5 }} />
+                    <Text style={{ color: 'white' }} >
                         Settings
                     </Text>
                 </View>
 
-                <View style={styles.locationRow}>
-                    <Image source={pin_drop} style={styles.iconImage} />
-                    <Text style={styles.text} >
+                <View style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
+                    <Image source={pin_drop} style={{ margin: 5 }} />
+                    <Text style={{ color: 'white' }} >
                         Send Feedback
                     </Text>
                 </View>
-                <View style={styles.locationRow}>
-                    <Image source={pin_drop} style={styles.iconImage} />
-                    <Text style={styles.text} >
+                <View style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
+                    <Image source={pin_drop} style={{ margin: 5 }} />
+                    <Text style={{ color: 'white' }} >
                         Share This App
                     </Text>
                 </View>
-                <View style={styles.locationRow}>
-                    <Image source={pin_drop} style={styles.iconImage} />
-                    <Text style={styles.text} >
+                <View style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
+                    <Image source={pin_drop} style={{ margin: 5 }} />
+                    <Text style={{ color: 'white' }} >
                         Rate this App
-                    </Text>
+                        </Text>
                 </View>
             </View>
         );
@@ -109,27 +109,6 @@ const styles = StyleSheet.create({
         height: '100%',
         width: '100%'
     },
-    iconImage: {
-        margin: 5,
-
-    },
-    selectRow: {
-        backgroundColor: 'black',
-        width: '100%',
-        height: 30
-    },
-    locationRow: {
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'row',
-        paddingLeft: 5,
-        alignItems: 'center',
-    },
-    text: {
-
-        color: 'white'
-    }
-
 });
 
 

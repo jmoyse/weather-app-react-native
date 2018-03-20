@@ -27,6 +27,8 @@
   "exclude": [
     "index.android.js",
     "index.ios.js",
+    "index.windows.js",
+    "index.web.js",
     "index.js",
     "node_modules",
     "__test",
