@@ -27,14 +27,11 @@ yarn-error.log*
 # android authoring key
 /key
 
-# ios build
+# ios building tools
 /ios
 
-# ios build
+# ios building tools
 /windows
 
 # testing
 /coverage
-
-# production
-/build
