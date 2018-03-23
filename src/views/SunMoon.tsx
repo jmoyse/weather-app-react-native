@@ -13,7 +13,7 @@ export default class SunMoon extends React.Component<SunMoonProps, SunMoonState>
         super(props);
     }
     componentWillReceiveProps (newProps: SunMoonProps, newState: SunMoonState) {
-        console.log(newProps);
+        //console.log(newProps);
     }
 
     render () {

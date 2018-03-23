@@ -13,7 +13,7 @@ export default class DetailedWeather extends React.Component<DetailedWeatherProp
         super(props);
     }
     componentWillReceiveProps (newProps: DetailedWeatherProps, newState: DetailedWeatherState) {
-        console.log(newProps);
+        //console.log(newProps);
     }
 
     render () {
@@ -100,18 +100,12 @@ export default class DetailedWeather extends React.Component<DetailedWeatherProp
                     <Text style={styles.textLeft}>
                         {
                             /*
-
+                            // not sure this is actually the forecast?
                             (this.props.forecastJson as any) !== undefined ?
                                 ((this.props.forecastJson as any).results.channel.item.description) : ''
-
                             */
                         }
-
-
                         Tonight - Evening clouds will give to clearing overnight. Warm and humid. Low 74F(23.3C). Winds SSW at 5 to 10 mph(8.0 to 16.1kph).
-
-
-
                     </Text>
                 </View>
 
@@ -140,5 +134,4 @@ const styles = StyleSheet.create({
         marginTop: 5,
         marginBottom: 5,
     },
-
 });

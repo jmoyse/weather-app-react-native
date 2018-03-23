@@ -27,7 +27,7 @@ export default class Forecast extends React.Component<ForecastProps, ForecastSta
                             (
                                 (
                                     (this.props.forecastJson as any).results.channel.item.forecast as Array<Object>).slice(0, this.state.showExtendedForecast ? 10 : 5).map(dayNode =>
-                                        <View key={dayNode.toString()}>
+                                        <View key={dayNode.toString() + Math.random() * 1000}>
                                             <WeatherDay key={((dayNode as any).date as string)} dayJSON={dayNode} />
 
                                             <View

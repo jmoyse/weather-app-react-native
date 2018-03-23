@@ -13,20 +13,21 @@ export default class WindPressure extends React.Component<WindPressureProps, Win
         super(props);
     }
     componentWillReceiveProps (newProps: WindPressureProps, newState: WindPressureState) {
-        console.log(newProps);
+        //console.log(newProps);
     }
 
-    getCardinalDirection (angle: number) { // snagged from: https://gist.github.com/basarat/4670200
+    getCardinalDirection (angle: number): string { // snagged from: https://gist.github.com/basarat/4670200
         if (typeof angle === 'string') angle = parseInt(angle);
         if (angle <= 0 || angle > 360 || typeof angle === 'undefined')
             return '☈';
-        const arrows = { north: 'N ↑', north_east: 'NE ↗', east: 'E → ', south_east: 'SE ↘ ', south: 'S ↓', south_west: 'SW ↙', west: 'W ←', north_west: 'NW ↖' };
+        const arrows: { [s: string]: string; } = { north: 'N ↑', north_east: 'NE ↗', east: 'E → ', south_east: 'SE ↘ ', south: 'S ↓', south_west: 'SW ↙', west: 'W ←', north_west: 'NW ↖' };
         const directions = Object.keys(arrows);
         const degree = 360 / directions.length;
         angle = angle + degree / 2;
         for (let i = 0; i < directions.length; i++) {
-            if (angle >= (i * degree) && angle < (i + 1) * degree)
+            if (angle >= (i * degree) && angle < (i + 1) * degree) {
                 return arrows[directions[i]];
+            }
         }
         return arrows['north'];
     }

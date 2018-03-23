@@ -5,8 +5,7 @@ import { WeatherAppStore } from '../store/WeatherAppStore';
 export default function addLocationReducer (currentState: WeatherAppStore.LocationStore, action: AddLocationAction | any): WeatherAppStore.LocationStore {
     if (currentState === undefined) {
         currentState = {
-            //locations: new Array<String>()
-            locations: ['2487889', '21044']
+            locations: ['94102', '21044']
         };
     }
 

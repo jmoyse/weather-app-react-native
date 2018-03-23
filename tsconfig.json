@@ -22,7 +22,7 @@
     //"allowJs": true,
     "allowJs": true,
     //"allowSyntheticDefaultImports": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
   },
   "exclude": [
     "index.android.js",

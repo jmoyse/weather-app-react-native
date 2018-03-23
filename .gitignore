@@ -24,6 +24,9 @@ yarn-error.log*
 # android build
 /android
 
+# android authoring key
+/key
+
 # ios build
 /ios
 
