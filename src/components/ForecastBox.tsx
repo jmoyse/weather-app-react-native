@@ -14,9 +14,6 @@ export default class ForecastBox extends React.Component<ForecastBoxProps, Forec
     constructor (props: ForecastBoxProps) {
         super(props);
     }
-    componentWillReceiveProps (newProps: ForecastBoxProps, newState: ForecastBoxState) {
-        console.log(newProps);
-    }
 
     render () {
         return (
@@ -29,18 +26,14 @@ export default class ForecastBox extends React.Component<ForecastBoxProps, Forec
                                 <WeatherDay key={((dayNode as any).date as string)} dayJSON={dayNode} />
                             )
                         ) : <Text> N/A </Text>
-
                 }
             </View>
-
         );
     }
 }
 
 const styles = StyleSheet.create({
     container: {
-        //backgroundColor: '#0000007f',
-        //margin: 10,
-        //padding: 10,
+
     },
 });

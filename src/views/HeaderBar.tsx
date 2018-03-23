@@ -19,7 +19,6 @@ export default class HeaderBar extends React.Component<HeaderBarProps, HeaderBar
         return (
             <View style={styles.view}>
                 <StatusBar animated={true} barStyle="default" />
-
                 <View style={styles.barView}>
                     <Image source={hamburgerIcon} />
 
@@ -32,8 +31,7 @@ export default class HeaderBar extends React.Component<HeaderBarProps, HeaderBar
                             }
                         </Text>
 
-                        <Text
-                            style={styles.timestampText}>
+                        <Text style={styles.timestampText}>
                             {
                                 (this.props.forecastJson as any) !== undefined && (this.props.forecastJson as any).channel !== undefined ?
                                     ((this.props.forecastJson as any).channel.lastBuildDate as String).split(' ')[4] + ' ' +
@@ -44,7 +42,11 @@ export default class HeaderBar extends React.Component<HeaderBarProps, HeaderBar
                         </Text>
                     </View>
 
-                    <TouchableOpacity onPress={() => { store.dispatch(setLocationWindowVisible(true)) }} accessibilityLabel="Show 5 day forecast" style={{ paddingRight: 5 }} >
+                    <TouchableOpacity
+                        onPress={() => { store.dispatch(setLocationWindowVisible(true)) }}
+                        accessibilityLabel="Show 5 day forecast"
+                        style={{ paddingRight: 5 }}
+                    >
                         <Image source={plusIcon} />
                     </TouchableOpacity>
 
@@ -54,10 +56,8 @@ export default class HeaderBar extends React.Component<HeaderBarProps, HeaderBar
     }
 }
 
-
 const hamburgerIcon = require('../icons/system/ic_menu_white_24dp.png');
 const plusIcon = require('../icons/system/ic_plus_white_24dp.png');
-
 
 const styles = StyleSheet.create({
     view: {

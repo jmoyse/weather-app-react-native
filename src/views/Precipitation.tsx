@@ -12,21 +12,19 @@ export default class Precipitation extends React.Component<PrecipitationProps, P
     constructor (props: PrecipitationProps) {
         super(props);
     }
-    componentWillReceiveProps (newProps: PrecipitationProps, newState: PrecipitationState) {
-        console.log(newProps);
-    }
-
     render () {
         return (
             <SubSection title="Precipitation">
-                <Text style={{ color: 'white' }}> Work in progress </Text>
+                <Text style={styles.textStyle}>
+                    Work in progress
+                </Text>
             </SubSection>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
-
-    },
+    textStyle: {
+        color: 'white',
+    }
 });

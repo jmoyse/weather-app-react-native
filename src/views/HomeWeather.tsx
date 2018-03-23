@@ -44,8 +44,8 @@ export default class HomeWeather extends React.Component<HomeWeatherProps, HomeW
         return (
             <View style={styles.container} >
                 <View style={styles.positionalContainer}>
-                    <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', paddingLeft: 10, }}>
-                        <View style={{ width: 20, height: 20 }}>
+                    <View style={styles.weatherIconView}>
+                        <View style={styles.icon}>
                             {
                                 (this.props.forecastJson as any) !== undefined ?
                                     <WeatherIcon weatherID={(this.props.forecastJson as any).results.channel.item.condition.code} />
@@ -57,7 +57,8 @@ export default class HomeWeather extends React.Component<HomeWeatherProps, HomeW
                             {(this.props.forecastJson as any) !== undefined ? this.capitolizeFirstChar((this.props.forecastJson as any).results.channel.item.condition.text) : ''}
                         </Text>
                     </View>
-                    <View style={{ direction: 'ltr', flexDirection: 'row', paddingLeft: 12, justifyContent: 'flex-start' }}>
+
+                    <View style={styles.currentTempView}>
                         <Image source={high} style={{ height: 20, width: 20 }} />
 
                         <Text style={styles.highText}>
@@ -75,7 +76,6 @@ export default class HomeWeather extends React.Component<HomeWeatherProps, HomeW
                     >
                         {(this.props.forecastJson as any) !== undefined ? (this.props.forecastJson as any).results.channel.item.condition.temp + '°' : ''}
                     </Text>
-
                 </View>
             </View>
         );
@@ -84,7 +84,6 @@ export default class HomeWeather extends React.Component<HomeWeatherProps, HomeW
 
 const low = require('../icons/system/ic_keyboard_arrow_down_white_24dp_2x.png');
 const high = require('../icons/system/ic_keyboard_arrow_up_white_24dp_2x.png');
-
 
 const styles = StyleSheet.create({
     container: {
@@ -98,6 +97,22 @@ const styles = StyleSheet.create({
     },
     view: {
         width: '100%'
+    },
+    weatherIconView: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        paddingLeft: 10
+    },
+    currentTempView: {
+        direction: 'ltr',
+        flexDirection: 'row',
+        paddingLeft: 12,
+        justifyContent: 'flex-start'
+    },
+    icon: {
+        width: 20,
+        height: 20
     },
     conditionsText: {
         color: 'white',
@@ -125,7 +140,6 @@ const styles = StyleSheet.create({
         textShadowRadius: 2,
         fontFamily: 'HelveticaNeueLTStd_Th',
     },
-
     currentTempText: {
         color: 'white',
         fontSize: 100,

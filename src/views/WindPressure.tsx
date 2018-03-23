@@ -20,7 +20,16 @@ export default class WindPressure extends React.Component<WindPressureProps, Win
         if (typeof angle === 'string') angle = parseInt(angle);
         if (angle <= 0 || angle > 360 || typeof angle === 'undefined')
             return '☈';
-        const arrows: { [s: string]: string; } = { north: 'N ↑', north_east: 'NE ↗', east: 'E → ', south_east: 'SE ↘ ', south: 'S ↓', south_west: 'SW ↙', west: 'W ←', north_west: 'NW ↖' };
+        const arrows: { [s: string]: string; } = {
+            north: 'N ↑',
+            north_east: 'NE ↗',
+            east: 'E →',
+            south_east: 'SE ↘',
+            south: 'S ↓',
+            south_west: 'SW ↙',
+            west: 'W ←',
+            north_west: 'NW ↖'
+        };
         const directions = Object.keys(arrows);
         const degree = 360 / directions.length;
         angle = angle + degree / 2;
@@ -36,13 +45,13 @@ export default class WindPressure extends React.Component<WindPressureProps, Win
     render () {
         return (
             <SubSection title="Wind & Pressure">
-                <View style={{ position: 'relative', top: '40%' }}>
+                <View style={styles.groundLine}> {/* prespective line */}
                     <View
                         style={styles.line}
                     />
                 </View>
-                <View style={{ flex: 1, height: '100%', width: '100%', flexDirection: 'row' }} >
-                    <Image source={windmill} style={{ height: 100, width: 100 }} resizeMode="contain" />
+                <View style={styles.windmillContainer} >
+                    <Image source={windmill} style={styles.windmillIconStyle} resizeMode="contain" />
 
                     {
                         /*
@@ -72,18 +81,14 @@ export default class WindPressure extends React.Component<WindPressureProps, Win
 
 
                     <View style={{ padding: 2 }}>
-
-                        <Text
-                            style={styles.text}>
+                        <Text style={styles.text}>
                             Wind
                         </Text>
                         <View style={{ flex: 1, flexDirection: 'row', alignItems: 'baseline' }}>
                             <Text style={styles.textNumbers}>
                                 {
                                     (this.props.forecastJson as any) !== undefined ?
-
                                         ((this.props.forecastJson as any).results.channel.wind.speed) + ' ' : ''
-
                                 }
                             </Text>
 
@@ -91,7 +96,15 @@ export default class WindPressure extends React.Component<WindPressureProps, Win
                                 {
                                     (this.props.forecastJson as any) !== undefined ?
                                         ((this.props.forecastJson as any).results.channel.units.speed) + ' ' +
-                                        this.getCardinalDirection(Number.parseFloat((this.props.forecastJson as any).results.channel.wind.direction))
+                                        this.getCardinalDirection(Number.parseFloat((this.props.forecastJson as any).results.channel.wind.direction)).split(' ')[0]
+                                        : ''
+                                }
+                            </Text>
+                            <Text style={styles.directinoText}>
+                                {
+                                    (this.props.forecastJson as any) !== undefined ?
+
+                                        '  ' + this.getCardinalDirection(Number.parseFloat((this.props.forecastJson as any).results.channel.wind.direction)).split(' ')[1] + '  '
                                         : ''
                                 }
                             </Text>
@@ -110,7 +123,16 @@ const styles = StyleSheet.create({
         fontFamily: 'HelveticaNeueLTStd_Lt',
         fontSize: 10,
     },
-
+    directinoText: {
+        color: 'white',
+        textAlign: 'left',
+        fontFamily: 'HelveticaNeueLTStd_Lt',
+        fontSize: 25,
+    },
+    groundLine: {
+        position: 'relative',
+        top: '40%'
+    },
     textNumbers: {
         color: 'white',
         textAlign: 'left',
@@ -123,4 +145,14 @@ const styles = StyleSheet.create({
         marginTop: 5,
         marginBottom: 5,
     },
+    windmillIconStyle: {
+        height: 100,
+        width: 100
+    },
+    windmillContainer: {
+        flex: 1,
+        height: '100%',
+        width: '100%',
+        flexDirection: 'row'
+    }
 });

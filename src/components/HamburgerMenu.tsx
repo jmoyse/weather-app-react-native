@@ -21,9 +21,6 @@ class HamburgerMenuRedux extends React.Component<HamburgerMenuProps, HamburgerMe
     constructor (props: HamburgerMenuProps) {
         super(props);
     }
-    componentWillReceiveProps (newProps: HamburgerMenuProps, newState: HamburgerMenuState) {
-        console.log(newProps);
-    }
 
     render () {
         return (

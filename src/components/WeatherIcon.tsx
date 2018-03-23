@@ -4,7 +4,6 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 export interface WeatherIconProps {
     weatherID: number;
 }
-
 export interface WeatherIconState { }
 
 const blowingsnow = require('../icons/weather2/20.png');
@@ -101,10 +100,7 @@ class WeatherIcon extends React.Component<WeatherIconProps, WeatherIconState> {
 const styles = StyleSheet.create({
     image: {
         padding: 15,
-        //height: 'fit',
-        //width: 'auto',
         flex: 1,
-        //alignSelf: 'stretch',
         width: undefined,
         height: undefined
     },

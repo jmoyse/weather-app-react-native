@@ -69,9 +69,7 @@ export default class DetailedWeather extends React.Component<DetailedWeatherProp
                                 <Text style={styles.textRight}>
                                     {
                                         (this.props.forecastJson as any) !== undefined ?
-                                            ((this.props.forecastJson as any).results.channel.atmosphere.pressure) === '0' ? 'Falling' : 'Rising'//+
-                                            //((this.props.forecastJson as any).results.channel.units.distance)
-
+                                            ((this.props.forecastJson as any).results.channel.atmosphere.pressure) === '0' ? 'Falling' : 'Rising'
                                             : ''
                                     }
                                 </Text>

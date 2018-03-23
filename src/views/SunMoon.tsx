@@ -12,59 +12,34 @@ export default class SunMoon extends React.Component<SunMoonProps, SunMoonState>
     constructor (props: SunMoonProps) {
         super(props);
     }
-    componentWillReceiveProps (newProps: SunMoonProps, newState: SunMoonState) {
-        //console.log(newProps);
-    }
-
     render () {
         return (
             <SubSection title="Sun & Moon">
 
                 <View >
-                    <View style={{ display: 'flex', flexDirection: 'row', height: 25, justifyContent: 'flex-end', alignItems: 'center' }}>
+                    <View style={styles.moonContainer}>
                         <View style={styles.whitecircle}>
                         </View>
                         <Text style={styles.text}>
                             First Quarter
                         </Text>
                     </View>
-                    <View style={{
-                        borderBottomColor: '#BCBCBAFF',
-                        borderBottomWidth: 1,
-                        borderStyle: 'solid',
-                        padding: 0,
-                        margin: 0,
-                    }}>
-                        <View style={{
-                            borderBottomColor: '#FF000000',
-                            borderBottomWidth: 3,
-                            //borderStyle: 'solid',
-
-                        }}>
-                            <View style={{
-
-                                display: 'flex',
-                                alignItems: 'center',
-                                height: 125,
-
-
-                            }} >
+                    {/* not pretty, but this is a circle, with another view to cut it in half, and another to add a small border outside*/}
+                    <View style={styles.sunContainer}> {/* main contaner with no padding*/}
+                        <View style={styles.circleBorder}> {/* adds a small border */}
+                            <View style={styles.circleCutoff} > {/* cuts the circle in half */}
                                 <View style={styles.yellowcircle} />
                             </View>
                         </View>
                     </View>
-                    <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', paddingTop: 5 }}>
-                        <Text
-                            style={styles.text}>
-
+                    <View style={styles.startEndTimeView}>
+                        <Text style={styles.text}>
                             {
                                 (this.props.forecastJson as any) !== undefined ?
                                     ((this.props.forecastJson as any).results.channel.astronomy.sunrise) : ''
                             }
                         </Text>
-                        <Text
-                            style={styles.text}>
-
+                        <Text style={styles.text}>
                             {
                                 (this.props.forecastJson as any) !== undefined ?
                                     ((this.props.forecastJson as any).results.channel.astronomy.sunset) : ''
@@ -79,11 +54,33 @@ export default class SunMoon extends React.Component<SunMoonProps, SunMoonState>
 
 const styles = StyleSheet.create({
     text: {
-
         color: 'white',
         textAlign: 'right',
         fontFamily: 'HelveticaNeueLTStd_Lt',
         fontSize: 12,
+    },
+    moonContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        height: 25,
+        justifyContent: 'flex-end',
+        alignItems: 'center'
+    },
+    sunContainer: {
+        borderBottomColor: '#BCBCBAFF',
+        borderBottomWidth: 1,
+        borderStyle: 'solid',
+        padding: 0,
+        margin: 0,
+    },
+    circleCutoff: {
+        display: 'flex',
+        alignItems: 'center',
+        height: 125
+    },
+    circleBorder: {
+        borderBottomColor: '#FF000000',
+        borderBottomWidth: 3
     },
     whitecircle: {
         backgroundColor: 'white',
@@ -91,7 +88,12 @@ const styles = StyleSheet.create({
         height: 25,
         borderRadius: 25 / 2,
         margin: 5
-
+    },
+    startEndTimeView: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingTop: 5
     },
 
     yellowcircle: {

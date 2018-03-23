@@ -63,15 +63,11 @@ class AddNewLocationRedux extends React.Component<AddNewLocationProps, AddNewLoc
                             //onChangeText={(text) => this.setState({ something: text })}
                             clearTextOnFocus={true}
                             onSubmitEditing={(event) => this.processLocation(event.nativeEvent.text)}
-                        >
+                        />
 
-                        </TextInput>
-
-                        <View style={{ padding: 15 }}>
-                            <Text style={{ fontSize: 15, color: 'white' }}>
-                                {
-                                    (this.state.inputText.length > 0) ? 'Invalid zipcode ' + this.state.inputText : ' '
-                                }
+                        <View style={styles.messageView}>
+                            <Text style={styles.messageTextStyle}>
+                                {(this.state.inputText.length > 0) ? 'Invalid zipcode ' + this.state.inputText : ' '}
                             </Text>
                         </View>
                     </View>
@@ -87,7 +83,6 @@ const styles = StyleSheet.create({
         height: '100%',
         width: '100%',
         display: 'flex',
-
         backgroundColor: '#272627',
     },
     textInput: {
@@ -97,7 +92,6 @@ const styles = StyleSheet.create({
         paddingTop: 20,
         backgroundColor: '#272627',
         color: 'white',
-
     },
     textLeft: {
         color: 'white',
@@ -111,6 +105,13 @@ const styles = StyleSheet.create({
         textAlign: 'right',
         fontFamily: 'HelveticaNeueLTStd_Lt',
         fontSize: 12,
+    },
+    messageView: {
+        padding: 15
+    },
+    messageTextStyle: {
+        fontSize: 15,
+        color: 'white',
     },
     line: {
         borderBottomColor: '#AFAFAC64',

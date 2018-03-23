@@ -21,27 +21,24 @@ class HamburgerMenuRedux extends React.Component<HamburgerMenuProps, HamburgerMe
     constructor (props: HamburgerMenuProps) {
         super(props);
     }
-    componentWillReceiveProps (newProps: HamburgerMenuProps, newState: HamburgerMenuState) {
-        console.log(newProps);
-    }
 
     render () {
         return (
             <View style={styles.container} >
-                <View style={{ backgroundColor: 'black', width: '100%', height: 30 }}>
-                    <Text style={{ color: 'white', paddingLeft: 10, paddingTop: 5, }}>
+                <View style={styles.menuText}>
+                    <Text style={styles.headerEntry}>
                         Locations
                     </Text>
                 </View>
-                <View style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
-                    <Image source={edit_location} style={{ margin: 5 }} />
-                    <Text style={{ color: 'white' }} >
+                <View style={styles.menuEntry}>
+                    <Image source={edit_location} style={styles.iconStyle} />
+                    <Text style={styles.textStyle} >
                         Edit Locations
                     </Text>
                 </View>
-                <View style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
-                    <Image source={pin_drop} style={{ margin: 5 }} />
-                    <Text style={{ color: 'white' }} >
+                <View style={styles.menuEntry}>
+                    <Image source={pin_drop} style={styles.iconStyle} />
+                    <Text style={styles.textStyle} >
                         Current Location
                     </Text>
                 </View>
@@ -50,43 +47,41 @@ class HamburgerMenuRedux extends React.Component<HamburgerMenuProps, HamburgerMe
                     this.props.locations.map(location =>
                         <View
                             key={Math.random() * 10000}
-                            style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
-                            <Image source={pin_drop} style={{ margin: 5 }} />
-                            <Text style={{ color: 'white' }} >
+                            style={styles.menuEntry}>
+                            <Image source={pin_drop} style={styles.iconStyle} />
+                            <Text style={styles.textStyle} >
                                 {location}
                             </Text>
                         </View>
-
-
                     )
                 }
-                <View style={{ backgroundColor: 'black', width: '100%', height: 30 }}>
-                    <Text style={{ color: 'white', paddingLeft: 10, paddingTop: 5, }}>
+                <View style={styles.menuText}>
+                    <Text style={styles.headerEntry}>
                         Tools
                     </Text>
                 </View>
-                <View style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
-                    <Image source={pin_drop} style={{ margin: 5 }} />
-                    <Text style={{ color: 'white' }} >
+                <View style={styles.menuEntry}>
+                    <Image source={pin_drop} style={styles.iconStyle} />
+                    <Text style={styles.textStyle} >
                         Settings
                     </Text>
                 </View>
 
-                <View style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
-                    <Image source={pin_drop} style={{ margin: 5 }} />
-                    <Text style={{ color: 'white' }} >
+                <View style={styles.menuEntry}>
+                    <Image source={pin_drop} style={styles.iconStyle} />
+                    <Text style={styles.textStyle} >
                         Send Feedback
                     </Text>
                 </View>
-                <View style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
-                    <Image source={pin_drop} style={{ margin: 5 }} />
-                    <Text style={{ color: 'white' }} >
+                <View style={styles.menuEntry}>
+                    <Image source={pin_drop} style={styles.iconStyle} />
+                    <Text style={styles.textStyle} >
                         Share This App
                     </Text>
                 </View>
-                <View style={{ width: '100%', display: 'flex', flexDirection: 'row', paddingLeft: 5, alignItems: 'center' }}>
-                    <Image source={pin_drop} style={{ margin: 5 }} />
-                    <Text style={{ color: 'white' }} >
+                <View style={styles.menuEntry}>
+                    <Image source={pin_drop} style={styles.iconStyle} />
+                    <Text style={styles.textStyle} >
                         Rate this App
                         </Text>
                 </View>
@@ -95,12 +90,9 @@ class HamburgerMenuRedux extends React.Component<HamburgerMenuProps, HamburgerMe
     }
 }
 
-
 const add_location = require('../icons/system/ic_add_location_white_24dp_1x.png');
 const edit_location = require('../icons/system/ic_edit_location_white_24dp_1x.png');
 const pin_drop = require('../icons/system/ic_pin_drop_white_24dp_1x.png');
-
-
 
 const styles = StyleSheet.create({
     container: {
@@ -109,11 +101,31 @@ const styles = StyleSheet.create({
         height: '100%',
         width: '100%'
     },
+    menuEntry: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'row',
+        paddingLeft: 5,
+        alignItems: 'center'
+    },
+    menuText: {
+        backgroundColor: 'black',
+        width: '100%',
+        height: 30
+    },
+
+    headerEntry: {
+        color: 'white',
+        paddingLeft: 10,
+        paddingTop: 5,
+    },
+    iconStyle: {
+        margin: 5
+    },
+    textStyle: {
+        color: 'white'
+    }
 });
 
-
-
-
 const HamburgerMenu = connect(mapStateToProps)(HamburgerMenuRedux);
-
 export default HamburgerMenu;

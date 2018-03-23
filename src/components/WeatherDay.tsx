@@ -13,10 +13,6 @@ export default class WeatherDay extends React.Component<WeatherDayProps, Weather
     constructor (props: WeatherDayProps) {
         super(props);
     }
-    //days = [{ "Sun": "Sunday" }, { "Mon": "Monday" }, { "Tues": "Tuesday" }, { "Weds": "Wednesday" }, { "Thurs": "Thursday" }, { "Fri": "Friday" }, { "Sat": "Saturday" }];
-
-    //days2 = [{ "Sun": "Sunday" }, { "Mon": "Monday" }, { "Tues": "Tuesday" }, { "Weds": "Wednesday" }, { "Thurs": "Thursday" }, { "Fri": "Friday" }, { "Sat": "Saturday" }];
-
     protected dayTable: { [name: string]: string } = {
         'Mon': 'Monday',
         'Tue': 'Tuesday',
@@ -34,13 +30,10 @@ export default class WeatherDay extends React.Component<WeatherDayProps, Weather
                     {
                         this.dayTable[((this.props.dayJSON as any).day as string)]
                     }
-
-
                 </Text>
+
                 <View style={styles.weatherIcon}>
-
                     <WeatherIcon weatherID={Number.parseInt((this.props.dayJSON as any).code)} />
-
                 </View>
 
                 <View style={styles.tempsView}>
@@ -61,14 +54,12 @@ const styles = StyleSheet.create({
         fontFamily: 'HelveticaNeueLTStd_Th',
         fontSize: 15,
         color: '#8FBFE8',
-        //fontWeight: 'bold',
     },
     highText: {
         fontFamily: 'HelveticaNeueLTStd_Th',
         fontSize: 15,
         color: 'white',
         paddingRight: 15,
-        //fontWeight: 'bold',
     },
     dayText: {
         fontFamily: 'HelveticaNeueLTStd_Lt',
@@ -96,8 +87,5 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         alignContent: 'center',
         alignItems: 'center',
-
-
-
     }
 });

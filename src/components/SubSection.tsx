@@ -28,9 +28,8 @@ export default class SubSection extends React.Component<SubSectionProps, SubSect
                     /> : <View />
                 }
 
+                <View style={styles.viewGap} />
 
-                <View style={{ marginBottom: 10 }}>
-                </View>
                 {this.props.children}
             </View>
         );
@@ -39,7 +38,6 @@ export default class SubSection extends React.Component<SubSectionProps, SubSect
 
 const low = require('../icons/system/ic_file_download_white_24dp_1x.png');
 const high = require('../icons/system/ic_file_upload_white_24dp_1x.png');
-
 
 const styles = StyleSheet.create({
 
@@ -60,10 +58,12 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         color: 'white',
         marginBottom: 10,
-
     },
     line: {
         borderBottomColor: '#A8A7A6',
         borderBottomWidth: 1,
+    },
+    viewGap: {
+        marginBottom: 10
     }
 });

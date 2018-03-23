@@ -14,7 +14,6 @@ interface ForecastState {
 export default class Forecast extends React.Component<ForecastProps, ForecastState> {
     constructor (props: ForecastProps) {
         super(props);
-
         this.state = ({ showExtendedForecast: false });
     }
 
@@ -29,7 +28,6 @@ export default class Forecast extends React.Component<ForecastProps, ForecastSta
                                     (this.props.forecastJson as any).results.channel.item.forecast as Array<Object>).slice(0, this.state.showExtendedForecast ? 10 : 5).map(dayNode =>
                                         <View key={dayNode.toString() + Math.random() * 1000}>
                                             <WeatherDay key={((dayNode as any).date as string)} dayJSON={dayNode} />
-
                                             <View
                                                 style={styles.line}
                                             />
@@ -59,8 +57,6 @@ export default class Forecast extends React.Component<ForecastProps, ForecastSta
         );
     }
 }
-
-
 
 const styles = StyleSheet.create({
     container: {
