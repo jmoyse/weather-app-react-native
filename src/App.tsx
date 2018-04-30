@@ -106,12 +106,6 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%'
     },
-    text: {
-        color: 'white',
-        textAlign: 'left',
-        fontFamily: 'HelveticaNeueLTStd_Lt',
-        fontSize: 12,
-    }
 });
 
 

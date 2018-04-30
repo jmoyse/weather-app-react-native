@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, Image, TextInput, Modal } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, TextInput, Modal } from 'react-native';
 import { store, WeatherAppStore } from '../store/WeatherAppStore';
 import { setLocationWindowVisible } from '../actions/ShowNewLocationAction';
 import { addLocation } from '../actions/AddLocationAction';
@@ -96,14 +96,14 @@ const styles = StyleSheet.create({
     textLeft: {
         color: 'white',
         textAlign: 'left',
-        fontFamily: 'HelveticaNeueLTStd_Lt',
+        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
         fontSize: 12,
 
     },
     textRight: {
         color: 'white',
         textAlign: 'right',
-        fontFamily: 'HelveticaNeueLTStd_Lt',
+        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
         fontSize: 12,
     },
     messageView: {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, ScrollView, Dimensions, Image, ViewPagerAndroid, DrawerLayoutAndroid, Button, ViewPagerAndroidStatic, NativeSyntheticEvent, ViewPagerAndroidOnPageSelectedEventData } from 'react-native';
+import { Platform, StyleSheet, Text, View, ScrollView, Dimensions, Image, ViewPagerAndroid, DrawerLayoutAndroid, Button, ViewPagerAndroidStatic, NativeSyntheticEvent, ViewPagerAndroidOnPageSelectedEventData } from 'react-native';
 import SubSection from '../components/SubSection';
 import HomeWeather from './HomeWeather';
 import Forecast from './Forecast';
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     text: {
         color: 'white',
         textAlign: 'left',
-        fontFamily: 'HelveticaNeueLTStd_Lt',
+        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
         fontSize: 12,
     }
 });

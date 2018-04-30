@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, Image, StatusBar, TouchableOpacity, } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, StatusBar, TouchableOpacity, } from 'react-native';
 import { store, WeatherAppStore } from '../store/WeatherAppStore';
 import { setLocationWindowVisible } from '../actions/ShowNewLocationAction';
 import { connect } from 'react-redux';
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
         textShadowOffset: { width: 0.5, height: 0.5 },
         textShadowRadius: 2,
         padding: 0,
-        fontFamily: 'HelveticaLTStd_Light',
+        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
     },
     timestampText: {
         width: 100,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
         textShadowOffset: { width: 0.5, height: 0.5 },
         textShadowRadius: 2,
         padding: 0,
-        fontFamily: 'HelveticaLTStd_Light',
+        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
     },
 
 });

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image } from 'react-native';
 import SubSection from '../components/SubSection';
 
 interface WindPressureProps {
@@ -120,13 +120,13 @@ const styles = StyleSheet.create({
     text: {
         color: 'white',
         textAlign: 'left',
-        fontFamily: 'HelveticaNeueLTStd_Lt',
+        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
         fontSize: 10,
     },
     directinoText: {
         color: 'white',
         textAlign: 'left',
-        fontFamily: 'HelveticaNeueLTStd_Lt',
+        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
         fontSize: 25,
     },
     groundLine: {
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     textNumbers: {
         color: 'white',
         textAlign: 'left',
-        fontFamily: 'HelveticaNeueLTStd_Lt',
+        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
         fontSize: 13,
     },
     line: {

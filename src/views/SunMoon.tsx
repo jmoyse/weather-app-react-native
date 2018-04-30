@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 import SubSection from '../components/SubSection';
 
 interface SunMoonProps {
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     text: {
         color: 'white',
         textAlign: 'right',
-        fontFamily: 'HelveticaNeueLTStd_Lt',
+        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
         fontSize: 12,
     },
     moonContainer: {
