@@ -3,19 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "@types/jest": "^22.2.0",
-    "@types/react": "^16.0.40",
-    "@types/react-native": "^0.52.18",
-    "@types/react-test-renderer": "^16.0.0",
-    "babel-preset-react-native-stage-0": "^1.0.1",
-    "concurrently": "^3.5.1",
-    "react-native-scripts-ts": "1.11.3",
-    "react-native-typescript-transformer": "^1.2.3",
-    "react-test-renderer": "16.2.0",
-    "rnpm-plugin-windows": "^0.2.8",
-    "ts-jest": "^22.4.2",
-    "tslib": "^1.7.1",
-    "typescript": "^2.7.0"
+    "@types/jest": "*",
+    "@types/react": "*",
+    "@types/react-native": "*",
+    "@types/react-test-renderer": "*",
+    "babel-preset-react-native-stage-0": "*",
+    "concurrently": "*",
+    "react-native-typescript-transformer": "*",
+    "react-test-renderer": "*",
+    "rnpm-plugin-windows": "*",
+    "ts-jest": "*",
+    "tslib": "*",
+    "typescript": "*"
   },
   "jest": {},
   "scripts": {
@@ -32,13 +31,12 @@
     "android-release": "cd android && gradlew assembleRelease && copy app\\build\\outputs\\apk\\app-release.apk ..\\build"
   },
   "dependencies": {
-    "@types/react-redux": "^5.0.15",
-    "@types/redux": "^3.6.31",
-    "react": "16.3.0-alpha.1",
-    "react-native": "0.54.2",
-    "react-native-windows": "0.54.0-rc.1",
-    "react-redux": "^5.0.7",
-    "redux": "^3.7.2"
+    "@types/react-redux": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-windows": "*",
+    "react-redux": "*",
+    "redux": "*"
   },
   "rnpm": {
     "assets": [
