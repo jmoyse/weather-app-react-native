@@ -22,13 +22,13 @@ yarn-error.log*
 /src/fonts/Helvetica
 
 # android build
-/android
+#/android
 
 # android authoring key
 /key
 
 # ios building tools
-/ios
+#/ios
 
 # ios building tools
 #/windows
