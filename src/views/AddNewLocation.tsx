@@ -4,6 +4,7 @@ import { store, WeatherAppStore } from '../store/WeatherAppStore';
 import { setLocationWindowVisible } from '../actions/ShowNewLocationAction';
 import { addLocation } from '../actions/AddLocationAction';
 import { connect, Provider } from 'react-redux';
+import FontStyles from '../styles/FontStyles';
 
 interface AddNewLocationProps {
     visible: boolean;
@@ -96,14 +97,14 @@ const styles = StyleSheet.create({
     textLeft: {
         color: 'white',
         textAlign: 'left',
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
+        fontFamily: FontStyles.Thin,
         fontSize: 12,
 
     },
     textRight: {
         color: 'white',
         textAlign: 'right',
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
+        fontFamily: FontStyles.Thin,
         fontSize: 12,
     },
     messageView: {

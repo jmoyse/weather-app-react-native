@@ -3,6 +3,7 @@ import { Platform, StyleSheet, Text, View, Image, StatusBar, TouchableOpacity, }
 import { store, WeatherAppStore } from '../store/WeatherAppStore';
 import { setLocationWindowVisible } from '../actions/ShowNewLocationAction';
 import { connect } from 'react-redux';
+import FontStyles from '../styles/FontStyles';
 
 interface HeaderBarProps {
     forecastJson: Object;
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
         textShadowOffset: { width: 0.5, height: 0.5 },
         textShadowRadius: 2,
         padding: 0,
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
+        fontFamily: FontStyles.Thin,
     },
     timestampText: {
         width: 100,
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
         textShadowOffset: { width: 0.5, height: 0.5 },
         textShadowRadius: 2,
         padding: 0,
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
+        fontFamily: FontStyles.Thin,
     },
 
 });

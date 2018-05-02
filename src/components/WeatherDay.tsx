@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import WeatherIcon from './WeatherIcon';
+import FontStyles from '../styles/FontStyles';
 
 interface WeatherDayProps {
     dayJSON: Object;
@@ -51,19 +52,18 @@ export default class WeatherDay extends React.Component<WeatherDayProps, Weather
 
 const styles = StyleSheet.create({
     lowText: {
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Th', // Helvetica Neue LT Std 35 Thin -- Weight 100
+        fontFamily: FontStyles.Standard,
         fontSize: 15,
         color: '#8FBFE8',
     },
     highText: {
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Th', // Helvetica Neue LT Std 35 Thin -- Weight 100
-        fontWeight: '100',
+        fontFamily: FontStyles.Standard,
         fontSize: 15,
         color: 'white',
         paddingRight: 15,
     },
     dayText: {
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
+        fontFamily: FontStyles.Standard,
         fontSize: 15,
         textAlign: 'left',
         color: 'white',

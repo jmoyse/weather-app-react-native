@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Platform, StyleSheet, Text, View, Image } from 'react-native';
 import SubSection from '../components/SubSection';
 import WeatherIcon from '../components/WeatherIcon';
+import FontStyles from '../styles/FontStyles';
 interface DetailedWeatherProps {
     forecastJson: Object;
 }
@@ -116,14 +117,14 @@ const styles = StyleSheet.create({
     textLeft: {
         color: 'white',
         textAlign: 'left',
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
+        fontFamily: FontStyles.Thin,
         fontSize: 12,
 
     },
     textRight: {
         color: 'white',
         textAlign: 'right',
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
+        fontFamily: FontStyles.Thin,
         fontSize: 12,
     },
     line: {

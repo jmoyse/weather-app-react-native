@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Platform, StyleSheet, Dimensions, Text, View, TextInput, Image, StatusBar, ToolbarAndroid, WebView } from 'react-native';
 import WeatherIcon from '../components/WeatherIcon';
+import FontStyles from '../styles/FontStyles';
 interface HomeWeatherProps {
     forecastJson: Object;
 }
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
         textShadowColor: 'black',
         textShadowOffset: { width: 1, height: 1 },
         textShadowRadius: 2,
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Th', // Helvetica Neue LT Std 35 Thin -- Weight 100
+        fontFamily: FontStyles.Thin,
     },
     highText: {
         color: 'white',
@@ -129,7 +130,7 @@ const styles = StyleSheet.create({
         textShadowColor: 'black',
         textShadowOffset: { width: 1, height: 1 },
         textShadowRadius: 2,
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Th', // Helvetica Neue LT Std 35 Thin -- Weight 100
+        fontFamily: FontStyles.Thin,
         marginRight: 20,
     },
     lowText: {
@@ -138,19 +139,18 @@ const styles = StyleSheet.create({
         textShadowColor: 'black',
         textShadowOffset: { width: 1, height: 1 },
         textShadowRadius: 2,
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Th', // Helvetica Neue LT Std 35 Thin -- Weight 100
+        fontFamily: FontStyles.Thin,
     },
     currentTempText: {
         color: 'white',
         fontSize: 100,
-        fontWeight: '300',
         paddingLeft: 10,
         lineHeight: 110,
         textAlign: 'center',
         textShadowColor: 'black',
         textShadowOffset: { width: 1, height: 3 },
         textShadowRadius: 5,
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Th', // Helvetica Neue LT Std 35 Thin -- Weight 100
+        fontFamily: FontStyles.UltraThin,
     },
 });
 

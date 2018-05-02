@@ -9,6 +9,7 @@ import SunMoon from './SunMoon';
 import WindPressure from './WindPressure';
 import WeatherMap from './WeatherMap';
 import HeaderBar from '../views/HeaderBar';
+import FontStyles from '../styles/FontStyles';
 
 interface WeatherLocationProps {
     zipcode: number;
@@ -165,7 +166,7 @@ const styles = StyleSheet.create({
     text: {
         color: 'white',
         textAlign: 'left',
-        fontFamily: (Platform.OS === 'ios') ? 'Helvetica Neue LT Std' : 'HelveticaNeueLTStd_Lt', // Helvetica Neue LT Std 45 Light -- Weight 300
+        fontFamily: FontStyles.Thin,
         fontSize: 12,
     }
 });
