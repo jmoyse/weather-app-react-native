@@ -9,6 +9,7 @@
     "@types/react-test-renderer": "*",
     "babel-preset-react-native-stage-0": "*",
     "concurrently": "*",
+    "jest": "^22.4.3",
     "react-native-typescript-transformer": "*",
     "react-test-renderer": "*",
     "rnpm-plugin-windows": "*",
@@ -32,6 +33,9 @@
   },
   "dependencies": {
     "@types/react-redux": "*",
+    "appcenter": "^1.5.0",
+    "appcenter-analytics": "^1.5.0",
+    "appcenter-crashes": "^1.5.0",
     "react": "*",
     "react-native": "*",
     "react-native-windows": "*",

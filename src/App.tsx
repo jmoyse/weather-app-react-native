@@ -18,7 +18,6 @@ function mapStateToProps (storeState: WeatherAppStore.Stores): WeatherAppStore.L
 
 export interface WeatherAppProps {
     locations: Array<String>;
-
 }
 
 export interface WeatherAppState {
@@ -48,7 +47,6 @@ class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
         return (
 
             <View style={styles.container}>
-
                 {
                     (Platform.OS === 'android') ?
                         /* TODO: this is insanely messy. fix this */
@@ -88,9 +86,7 @@ class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
                             }
                         </View>
                 }
-
             </View>
-
         );
     }
 }
