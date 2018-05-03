@@ -23,7 +23,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		195574289D885FF5E8FF60EA /* libPods-WeatherAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6690A09D3EFD00120B8B0AA /* libPods-WeatherAppTests.a */; };
 		199F5515949E447B92DAE36C /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 823BACD2AA294D47B105DCE3 /* Lato-Regular.ttf */; };
+		19B1323D96954AA7A765D8E4 /* HelveticaNeueLTStd_ThExO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 160EBD1BE8E14640A3DFAA9D /* HelveticaNeueLTStd_ThExO.otf */; };
 		24765146438347768544EE7F /* libAppCenterReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C41008661CFD445D91065211 /* libAppCenterReactNative.a */; };
 		286B8FF782324700A0B1BEFD /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D8BD7C4D9E84149950C9CF1 /* Lato-LightItalic.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -38,15 +40,21 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* WeatherAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WeatherAppTests.m */; };
+		303923EF3BED4E8DB555CF65 /* HelveticaNeueLTStd_UltLtEx.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF12CC20F80445DBC421BDB /* HelveticaNeueLTStd_UltLtEx.otf */; };
 		3379C96CA1494A0283D9F73F /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B603717D1B7C4D7FACF02350 /* Lato-Bold.ttf */; };
 		4C1FC83EA11647E9AA677120 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1265D9902AFD4736801A2EEF /* Lato-BlackItalic.ttf */; };
 		502619C792784A8C9B66DDA7 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F1172ED777944EC8F1A199A /* AppCenter-Config.plist */; };
 		5576B7006A314269A73D3A67 /* libAppCenterReactNativeAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 594BCD1F7096410496A2ECA7 /* libAppCenterReactNativeAnalytics.a */; };
 		5647CC532F9D437E9B1669FB /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6A54E25F9743D08FA3C9A2 /* Lato-BlackItalic.ttf */; };
+		56E36DD3D55AB737CFA39E3B /* libPods-WeatherApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D7C35BA31CED917C67D424 /* libPods-WeatherApp-tvOSTests.a */; };
+		5BB6E29234BE4F4FA0C6B88E /* HelveticaNeueLTStd_Th.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2784B5B421D8478E9369E00D /* HelveticaNeueLTStd_Th.otf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		63D8780BD69D4158BB35351A /* HelveticaNeueLTStd_UltLtEx.otf in Resources */ = {isa = PBXBuildFile; fileRef = D272D160CA72406481230298 /* HelveticaNeueLTStd_UltLtEx.otf */; };
 		64E1CFD2D24744AB9EE3C879 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAE56DCF0F114489A5BF017F /* Lato-HairlineItalic.ttf */; };
+		69BB6444E4C6434BAB50671D /* HelveticaNeueLTStd_UltLt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 686D66C41E604625A5D0EE44 /* HelveticaNeueLTStd_UltLt.otf */; };
+		6CD478B15A2D4549AD266DB0 /* HelveticaNeueLTStd_UltLtExO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 76F351C0FA044DE0BA6CA5C7 /* HelveticaNeueLTStd_UltLtExO.otf */; };
 		75DF1980277D47469A33BB62 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9666EBA1C5B54367AD41011C /* Lato-Italic.ttf */; };
+		76E5D2A9AC2F4651842D71F5 /* HelveticaLTStd_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4723D9188E54B2492C1FD52 /* HelveticaLTStd_Light.otf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		873450CC9C574639BCE66FB8 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED820E76CF474D9E8BA9FA4A /* Lato-Hairline.ttf */; };
 		878C78830E0043B2AB083418 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C071CB7A0AB74FEBBB6516B6 /* Lato-Regular.ttf */; };
@@ -58,32 +66,28 @@
 		A484F04677614C69B83949FD /* HelveticaNeueLTStd_ThEx.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9545CF742522411B8ED4C3B3 /* HelveticaNeueLTStd_ThEx.otf */; };
 		A4ED33113E6F4D3783FFF03B /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61CF5DCD11B74FE8A8252E50 /* Lato-HairlineItalic.ttf */; };
 		A585F2D959B44EA891912513 /* libAppCenterReactNativeCrashes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A71A089AEC4934897EC5F8 /* libAppCenterReactNativeCrashes.a */; };
+		ABCB1648E731F9205D4C4C94 /* libPods-WeatherApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA883442B6A55792306709D /* libPods-WeatherApp-tvOS.a */; };
 		AD2C0B43BAA648AEAF88A399 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1782F1B4BD4D475AADDA20D8 /* Lato-Bold.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		AEC5E09DCA144BFEABB63B82 /* HelveticaNeueLTStd_ThEx.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD7471E3B2C1409CB2ADE98D /* HelveticaNeueLTStd_ThEx.otf */; };
 		B28E2C41DC07462AB1010750 /* HelveticaNeueLTStd_UltLt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 072821B5A294443FBF15C66C /* HelveticaNeueLTStd_UltLt.otf */; };
 		BAF2056E4D7B4BA5984309CE /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA550496405A4AF6B4F07DAE /* Lato-Italic.ttf */; };
 		BDE9304B2E8F4300BB44F6AC /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49C9FE5D09CC4903824ED11A /* Lato-LightItalic.ttf */; };
 		CA46E355A7784B3AAC67A57A /* HelveticaNeueLTStd_UltLtExO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AB44B2433D347CFAD44B3A7 /* HelveticaNeueLTStd_UltLtExO.otf */; };
+		CC821239AEA24066A9A24896 /* nunito_sans_v3_latin_300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F78ADABEDC7409BA89CE00C /* nunito_sans_v3_latin_300.ttf */; };
+		CE5685EFBE0B6CB7C3FBC29D /* libPods-WeatherApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB82D5156847AF8C4FB1B9E /* libPods-WeatherApp.a */; };
 		D65FE8E123EF42398D8C170B /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FED2F3D368944E4A66E47A4 /* Lato-Light.ttf */; };
 		D88949FFEDF7412583B924AF /* nunito_sans_v3_latin_600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FD026475CC441D483F95571 /* nunito_sans_v3_latin_600.ttf */; };
+		DABAFB5F13E74885B72FAE04 /* nunito_sans_v3_latin_200.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58ABF29330DD4B60B2EE4F6B /* nunito_sans_v3_latin_200.ttf */; };
 		DC9A8B59DFD04AE380D5CFDF /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B49A08D3BA6E44A3A38EBDFA /* Lato-BoldItalic.ttf */; };
+		DFBEC736925B438CB220AFCD /* nunito_sans_v3_latin_700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD7D19C7D617481B9AF39077 /* nunito_sans_v3_latin_700.ttf */; };
 		E3B0481371704C62891B0A7B /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D4FE753E2C74336B8644D0A /* Lato-Hairline.ttf */; };
 		E4943F508D894270B507E5D1 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DC0D17D548649789576A499 /* Lato-Black.ttf */; };
+		E6EEA892C0C54E83A4DB6705 /* nunito_sans_v3_latin_600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD0137DCBBD457C9D158962 /* nunito_sans_v3_latin_600.ttf */; };
+		EEA142B4F7544B7EA4EF6D4E /* HelveticaNeueLTStd_Lt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 732CFCED7DAF4BA68404D325 /* HelveticaNeueLTStd_Lt.otf */; };
 		F068F6BA064E4C5285633D2A /* HelveticaLTStd_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 561CAE5EF096484299AA0776 /* HelveticaLTStd_Light.otf */; };
 		FA6941CD07D34A5480762B29 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E058BC0A4EA47DF8FF91BCE /* Lato-Black.ttf */; };
 		FFA60E945E754972A88F8D79 /* nunito_sans_v3_latin_700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A072F86164A43CBBDEE4AE6 /* nunito_sans_v3_latin_700.ttf */; };
-		76E5D2A9AC2F4651842D71F5 /* HelveticaLTStd_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4723D9188E54B2492C1FD52 /* HelveticaLTStd_Light.otf */; };
-		EEA142B4F7544B7EA4EF6D4E /* HelveticaNeueLTStd_Lt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 732CFCED7DAF4BA68404D325 /* HelveticaNeueLTStd_Lt.otf */; };
-		5BB6E29234BE4F4FA0C6B88E /* HelveticaNeueLTStd_Th.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2784B5B421D8478E9369E00D /* HelveticaNeueLTStd_Th.otf */; };
-		AEC5E09DCA144BFEABB63B82 /* HelveticaNeueLTStd_ThEx.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD7471E3B2C1409CB2ADE98D /* HelveticaNeueLTStd_ThEx.otf */; };
-		19B1323D96954AA7A765D8E4 /* HelveticaNeueLTStd_ThExO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 160EBD1BE8E14640A3DFAA9D /* HelveticaNeueLTStd_ThExO.otf */; };
-		69BB6444E4C6434BAB50671D /* HelveticaNeueLTStd_UltLt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 686D66C41E604625A5D0EE44 /* HelveticaNeueLTStd_UltLt.otf */; };
-		303923EF3BED4E8DB555CF65 /* HelveticaNeueLTStd_UltLtEx.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF12CC20F80445DBC421BDB /* HelveticaNeueLTStd_UltLtEx.otf */; };
-		6CD478B15A2D4549AD266DB0 /* HelveticaNeueLTStd_UltLtExO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 76F351C0FA044DE0BA6CA5C7 /* HelveticaNeueLTStd_UltLtExO.otf */; };
-		DABAFB5F13E74885B72FAE04 /* nunito_sans_v3_latin_200.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58ABF29330DD4B60B2EE4F6B /* nunito_sans_v3_latin_200.ttf */; };
-		CC821239AEA24066A9A24896 /* nunito_sans_v3_latin_300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F78ADABEDC7409BA89CE00C /* nunito_sans_v3_latin_300.ttf */; };
-		E6EEA892C0C54E83A4DB6705 /* nunito_sans_v3_latin_600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD0137DCBBD457C9D158962 /* nunito_sans_v3_latin_600.ttf */; };
-		DFBEC736925B438CB220AFCD /* nunito_sans_v3_latin_700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD7D19C7D617481B9AF39077 /* nunito_sans_v3_latin_700.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -407,8 +411,10 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WeatherApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WeatherApp/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		160EBD1BE8E14640A3DFAA9D /* HelveticaNeueLTStd_ThExO.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLTStd_ThExO.otf; path = ../src/fonts/Helvetica/HelveticaNeueLTStd_ThExO.otf; sourceTree = "<group>"; };
 		1782F1B4BD4D475AADDA20D8 /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../src/fonts/Lato/Lato-Bold.ttf"; sourceTree = "<group>"; };
 		1A11796E7A074A588FD9C7F0 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../src/fonts/Lato/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2784B5B421D8478E9369E00D /* HelveticaNeueLTStd_Th.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLTStd_Th.otf; path = ../src/fonts/Helvetica/HelveticaNeueLTStd_Th.otf; sourceTree = "<group>"; };
 		2A973E8BBFE747DCACA1BA26 /* HelveticaNeueLTStd_Th.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLTStd_Th.otf; path = ../src/fonts/HelveticaNeueLTStd_Th.otf; sourceTree = "<group>"; };
 		2BAB863DD1184A82B7751E9A /* HelveticaNeueLTStd_Lt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLTStd_Lt.otf; path = ../src/fonts/HelveticaNeueLTStd_Lt.otf; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* WeatherApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeatherApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -417,15 +423,25 @@
 		2D4FE753E2C74336B8644D0A /* Lato-Hairline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Hairline.ttf"; path = "../src/fonts/Lato-Hairline.ttf"; sourceTree = "<group>"; };
 		2E3AD78998564FA188F25A07 /* nunito_sans_v3_latin_300.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = nunito_sans_v3_latin_300.ttf; path = ../src/fonts/nunito_sans_v3_latin_300.ttf; sourceTree = "<group>"; };
 		49C9FE5D09CC4903824ED11A /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-LightItalic.ttf"; path = "../src/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		4AB82D5156847AF8C4FB1B9E /* libPods-WeatherApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CF12CC20F80445DBC421BDB /* HelveticaNeueLTStd_UltLtEx.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLTStd_UltLtEx.otf; path = ../src/fonts/Helvetica/HelveticaNeueLTStd_UltLtEx.otf; sourceTree = "<group>"; };
 		4D8BD7C4D9E84149950C9CF1 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-LightItalic.ttf"; path = "../src/fonts/Lato/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		53D7C35BA31CED917C67D424 /* libPods-WeatherApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		561CAE5EF096484299AA0776 /* HelveticaLTStd_Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaLTStd_Light.otf; path = ../src/fonts/HelveticaLTStd_Light.otf; sourceTree = "<group>"; };
+		5765D9CBC041F3D4DEA66399 /* Pods-WeatherApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp-tvOS/Pods-WeatherApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		58ABF29330DD4B60B2EE4F6B /* nunito_sans_v3_latin_200.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = nunito_sans_v3_latin_200.ttf; path = ../src/fonts/Nunito/nunito_sans_v3_latin_200.ttf; sourceTree = "<group>"; };
 		594BCD1F7096410496A2ECA7 /* libAppCenterReactNativeAnalytics.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativeAnalytics.a; sourceTree = "<group>"; };
+		5BA883442B6A55792306709D /* libPods-WeatherApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFDA743CFFB448E81F8A0AF /* AppCenterReactNativeCrashes.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeCrashes.xcodeproj; path = "../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		5FED2F3D368944E4A66E47A4 /* Lato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Light.ttf"; path = "../src/fonts/Lato/Lato-Light.ttf"; sourceTree = "<group>"; };
 		61CF5DCD11B74FE8A8252E50 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-HairlineItalic.ttf"; path = "../src/fonts/Lato/Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		686D66C41E604625A5D0EE44 /* HelveticaNeueLTStd_UltLt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLTStd_UltLt.otf; path = ../src/fonts/Helvetica/HelveticaNeueLTStd_UltLt.otf; sourceTree = "<group>"; };
 		6D4E540582DC48739E30F62E /* AppCenterReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNative.xcodeproj; path = ../node_modules/appcenter/ios/AppCenterReactNative.xcodeproj; sourceTree = "<group>"; };
 		6E058BC0A4EA47DF8FF91BCE /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../src/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
+		6F78ADABEDC7409BA89CE00C /* nunito_sans_v3_latin_300.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = nunito_sans_v3_latin_300.ttf; path = ../src/fonts/Nunito/nunito_sans_v3_latin_300.ttf; sourceTree = "<group>"; };
+		732CFCED7DAF4BA68404D325 /* HelveticaNeueLTStd_Lt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLTStd_Lt.otf; path = ../src/fonts/Helvetica/HelveticaNeueLTStd_Lt.otf; sourceTree = "<group>"; };
+		76F351C0FA044DE0BA6CA5C7 /* HelveticaNeueLTStd_UltLtExO.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLTStd_UltLtExO.otf; path = ../src/fonts/Helvetica/HelveticaNeueLTStd_UltLtExO.otf; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7F1172ED777944EC8F1A199A /* AppCenter-Config.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "WeatherApp/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		823BACD2AA294D47B105DCE3 /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../src/fonts/Lato/Lato-Regular.ttf"; sourceTree = "<group>"; };
@@ -437,30 +453,30 @@
 		8F060A8B6A784C72AD4F3600 /* AppCenterReactNativeAnalytics.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeAnalytics.xcodeproj; path = "../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics.xcodeproj"; sourceTree = "<group>"; };
 		9545CF742522411B8ED4C3B3 /* HelveticaNeueLTStd_ThEx.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLTStd_ThEx.otf; path = ../src/fonts/HelveticaNeueLTStd_ThEx.otf; sourceTree = "<group>"; };
 		9666EBA1C5B54367AD41011C /* Lato-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Italic.ttf"; path = "../src/fonts/Lato/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		9CD0137DCBBD457C9D158962 /* nunito_sans_v3_latin_600.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = nunito_sans_v3_latin_600.ttf; path = ../src/fonts/Nunito/nunito_sans_v3_latin_600.ttf; sourceTree = "<group>"; };
+		A05393A282A9675CFE4DDC10 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A0E904F130E6E02479C52D02 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
+		A52ECA3AC5B12867563BACEA /* Pods-WeatherApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp-tvOS/Pods-WeatherApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A6690A09D3EFD00120B8B0AA /* libPods-WeatherAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C7110C044C7BD8A9A86D0C /* Pods-WeatherAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAE56DCF0F114489A5BF017F /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-HairlineItalic.ttf"; path = "../src/fonts/Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		AD7D19C7D617481B9AF39077 /* nunito_sans_v3_latin_700.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = nunito_sans_v3_latin_700.ttf; path = ../src/fonts/Nunito/nunito_sans_v3_latin_700.ttf; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		AF4B4BE5ED001786712C5B86 /* Pods-WeatherApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp-tvOSTests/Pods-WeatherApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		B2590C4D15C243A2BECBD758 /* HelveticaNeueLTStd_ThExO.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLTStd_ThExO.otf; path = ../src/fonts/HelveticaNeueLTStd_ThExO.otf; sourceTree = "<group>"; };
 		B3CA6CD61847440AB2C0FB1A /* nunito_sans_v3_latin_200.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = nunito_sans_v3_latin_200.ttf; path = ../src/fonts/nunito_sans_v3_latin_200.ttf; sourceTree = "<group>"; };
 		B49A08D3BA6E44A3A38EBDFA /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../src/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
 		B603717D1B7C4D7FACF02350 /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../src/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
 		C071CB7A0AB74FEBBB6516B6 /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../src/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
 		C41008661CFD445D91065211 /* libAppCenterReactNative.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNative.a; sourceTree = "<group>"; };
+		C4723D9188E54B2492C1FD52 /* HelveticaLTStd_Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaLTStd_Light.otf; path = ../src/fonts/Helvetica/HelveticaLTStd_Light.otf; sourceTree = "<group>"; };
+		D2113AC0791A6F829B58077B /* Pods-WeatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		D272D160CA72406481230298 /* HelveticaNeueLTStd_UltLtEx.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLTStd_UltLtEx.otf; path = ../src/fonts/HelveticaNeueLTStd_UltLtEx.otf; sourceTree = "<group>"; };
 		DA550496405A4AF6B4F07DAE /* Lato-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Italic.ttf"; path = "../src/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		DD7471E3B2C1409CB2ADE98D /* HelveticaNeueLTStd_ThEx.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueLTStd_ThEx.otf; path = ../src/fonts/Helvetica/HelveticaNeueLTStd_ThEx.otf; sourceTree = "<group>"; };
 		E4A71A089AEC4934897EC5F8 /* libAppCenterReactNativeCrashes.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativeCrashes.a; sourceTree = "<group>"; };
 		ED820E76CF474D9E8BA9FA4A /* Lato-Hairline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Hairline.ttf"; path = "../src/fonts/Lato/Lato-Hairline.ttf"; sourceTree = "<group>"; };
-		C4723D9188E54B2492C1FD52 /* HelveticaLTStd_Light.otf */ = {isa = PBXFileReference; name = "HelveticaLTStd_Light.otf"; path = "../src/fonts/Helvetica/HelveticaLTStd_Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		732CFCED7DAF4BA68404D325 /* HelveticaNeueLTStd_Lt.otf */ = {isa = PBXFileReference; name = "HelveticaNeueLTStd_Lt.otf"; path = "../src/fonts/Helvetica/HelveticaNeueLTStd_Lt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2784B5B421D8478E9369E00D /* HelveticaNeueLTStd_Th.otf */ = {isa = PBXFileReference; name = "HelveticaNeueLTStd_Th.otf"; path = "../src/fonts/Helvetica/HelveticaNeueLTStd_Th.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DD7471E3B2C1409CB2ADE98D /* HelveticaNeueLTStd_ThEx.otf */ = {isa = PBXFileReference; name = "HelveticaNeueLTStd_ThEx.otf"; path = "../src/fonts/Helvetica/HelveticaNeueLTStd_ThEx.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		160EBD1BE8E14640A3DFAA9D /* HelveticaNeueLTStd_ThExO.otf */ = {isa = PBXFileReference; name = "HelveticaNeueLTStd_ThExO.otf"; path = "../src/fonts/Helvetica/HelveticaNeueLTStd_ThExO.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		686D66C41E604625A5D0EE44 /* HelveticaNeueLTStd_UltLt.otf */ = {isa = PBXFileReference; name = "HelveticaNeueLTStd_UltLt.otf"; path = "../src/fonts/Helvetica/HelveticaNeueLTStd_UltLt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4CF12CC20F80445DBC421BDB /* HelveticaNeueLTStd_UltLtEx.otf */ = {isa = PBXFileReference; name = "HelveticaNeueLTStd_UltLtEx.otf"; path = "../src/fonts/Helvetica/HelveticaNeueLTStd_UltLtEx.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		76F351C0FA044DE0BA6CA5C7 /* HelveticaNeueLTStd_UltLtExO.otf */ = {isa = PBXFileReference; name = "HelveticaNeueLTStd_UltLtExO.otf"; path = "../src/fonts/Helvetica/HelveticaNeueLTStd_UltLtExO.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		58ABF29330DD4B60B2EE4F6B /* nunito_sans_v3_latin_200.ttf */ = {isa = PBXFileReference; name = "nunito_sans_v3_latin_200.ttf"; path = "../src/fonts/Nunito/nunito_sans_v3_latin_200.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6F78ADABEDC7409BA89CE00C /* nunito_sans_v3_latin_300.ttf */ = {isa = PBXFileReference; name = "nunito_sans_v3_latin_300.ttf"; path = "../src/fonts/Nunito/nunito_sans_v3_latin_300.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9CD0137DCBBD457C9D158962 /* nunito_sans_v3_latin_600.ttf */ = {isa = PBXFileReference; name = "nunito_sans_v3_latin_600.ttf"; path = "../src/fonts/Nunito/nunito_sans_v3_latin_600.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AD7D19C7D617481B9AF39077 /* nunito_sans_v3_latin_700.ttf */ = {isa = PBXFileReference; name = "nunito_sans_v3_latin_700.ttf"; path = "../src/fonts/Nunito/nunito_sans_v3_latin_700.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EEABDA07A063A24BC34E90F2 /* Pods-WeatherApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp-tvOSTests/Pods-WeatherApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				195574289D885FF5E8FF60EA /* libPods-WeatherAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +509,7 @@
 				24765146438347768544EE7F /* libAppCenterReactNative.a in Frameworks */,
 				5576B7006A314269A73D3A67 /* libAppCenterReactNativeAnalytics.a in Frameworks */,
 				A585F2D959B44EA891912513 /* libAppCenterReactNativeCrashes.a in Frameworks */,
+				CE5685EFBE0B6CB7C3FBC29D /* libPods-WeatherApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +525,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				ABCB1648E731F9205D4C4C94 /* libPods-WeatherApp-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +533,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E36DD3D55AB737CFA39E3B /* libPods-WeatherApp-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +711,10 @@
 			isa = PBXGroup;
 			children = (
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				4AB82D5156847AF8C4FB1B9E /* libPods-WeatherApp.a */,
+				5BA883442B6A55792306709D /* libPods-WeatherApp-tvOS.a */,
+				53D7C35BA31CED917C67D424 /* libPods-WeatherApp-tvOSTests.a */,
+				A6690A09D3EFD00120B8B0AA /* libPods-WeatherAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -755,6 +779,7 @@
 				00622D68EB954990852142DC /* Resources */,
 				7F1172ED777944EC8F1A199A /* AppCenter-Config.plist */,
 				958345BA209A353F0010B60B /* Recovered References */,
+				BDFD3A9AACBD5BAA7A80A237 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -815,6 +840,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BDFD3A9AACBD5BAA7A80A237 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A05393A282A9675CFE4DDC10 /* Pods-WeatherApp.debug.xcconfig */,
+				A0E904F130E6E02479C52D02 /* Pods-WeatherApp.release.xcconfig */,
+				A52ECA3AC5B12867563BACEA /* Pods-WeatherApp-tvOS.debug.xcconfig */,
+				5765D9CBC041F3D4DEA66399 /* Pods-WeatherApp-tvOS.release.xcconfig */,
+				EEABDA07A063A24BC34E90F2 /* Pods-WeatherApp-tvOSTests.debug.xcconfig */,
+				AF4B4BE5ED001786712C5B86 /* Pods-WeatherApp-tvOSTests.release.xcconfig */,
+				A6C7110C044C7BD8A9A86D0C /* Pods-WeatherAppTests.debug.xcconfig */,
+				D2113AC0791A6F829B58077B /* Pods-WeatherAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -822,6 +862,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WeatherAppTests" */;
 			buildPhases = (
+				C9E4DE5091D8BB704B6EC38B /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -840,6 +881,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WeatherApp" */;
 			buildPhases = (
+				CBE2D1882D67FD8BCE3BBF75 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
@@ -858,6 +900,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WeatherApp-tvOS" */;
 			buildPhases = (
+				B38155B22FA60984F8D8DEBF /* [CP] Check Pods Manifest.lock */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
 				2D02E4791E0B4A5D006451C7 /* Resources */,
@@ -876,6 +919,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WeatherApp-tvOSTests" */;
 			buildPhases = (
+				4F21CCE9361B3B75ECB1865F /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -1388,6 +1432,78 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		4F21CCE9361B3B75ECB1865F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeatherApp-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B38155B22FA60984F8D8DEBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeatherApp-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9E4DE5091D8BB704B6EC38B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeatherAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBE2D1882D67FD8BCE3BBF75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeatherApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1455,6 +1571,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6C7110C044C7BD8A9A86D0C /* Pods-WeatherAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1487,6 +1604,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2113AC0791A6F829B58077B /* Pods-WeatherAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -1516,6 +1634,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A05393A282A9675CFE4DDC10 /* Pods-WeatherApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1540,6 +1659,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0E904F130E6E02479C52D02 /* Pods-WeatherApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1563,6 +1683,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A52ECA3AC5B12867563BACEA /* Pods-WeatherApp-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1601,6 +1722,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5765D9CBC041F3D4DEA66399 /* Pods-WeatherApp-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1639,6 +1761,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEABDA07A063A24BC34E90F2 /* Pods-WeatherApp-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1666,6 +1789,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF4B4BE5ED001786712C5B86 /* Pods-WeatherApp-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
