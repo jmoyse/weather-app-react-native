@@ -8,7 +8,6 @@
     "@types/react-native": "*",
     "@types/react-test-renderer": "*",
     "babel-preset-react-native-stage-0": "*",
-    "concurrently": "*",
     "jest": "^22.4.3",
     "react-native-typescript-transformer": "*",
     "react-test-renderer": "*",
@@ -20,7 +19,6 @@
   "jest": {},
   "scripts": {
     "start": "react-native start --transformer node_modules/react-native-typescript-transformer/index.js --sourceExts ts,tsx",
-    "dev": "concurrent --kill-others \"npm run start\" \"npm run android\"",
     "android": "react-native run-android",
     "windows": "react-native run-windows",
     "web": "react-native run-web",
@@ -36,6 +34,7 @@
     "appcenter": "^1.5.0",
     "appcenter-analytics": "^1.5.0",
     "appcenter-crashes": "^1.5.0",
+    "concurrently": "^3.5.1",
     "react": "*",
     "react-native": "*",
     "react-native-windows": "*",
