@@ -57,8 +57,8 @@ const styles = StyleSheet.create({
     text: {
         color: 'white',
         textAlign: 'right',
-        fontFamily: FontStyles.Thin,
-        fontSize: 8,
+        fontFamily: FontStyles.Standard,
+        fontSize: 12,
     },
     moonContainer: {
         display: 'flex',
@@ -99,8 +99,8 @@ const styles = StyleSheet.create({
 
     yellowcircle: {
         backgroundColor: '#FAD82F7D',
-        width: 275,
-        height: 275,
+        width: Platform.OS === 'ios' ? 275 : 240,
+        height: Platform.OS === 'ios' ? 125 : 275,
         borderTopLeftRadius: 375 / 2,
         borderTopRightRadius: 375 / 2
     }

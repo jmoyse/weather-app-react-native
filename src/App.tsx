@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Platform, StyleSheet, Text, View, ScrollView, Image, ViewPagerAndroid, DrawerLayoutAndroid, Button, ViewPagerAndroidStatic, NativeSyntheticEvent, ViewPagerAndroidOnPageSelectedEventData } from 'react-native';
+import { Platform, StyleSheet, Text, View, FlatList, ScrollView, Image, StatusBar, ViewPagerAndroid, DrawerLayoutAndroid, Button, ViewPagerAndroidStatic, NativeSyntheticEvent, ViewPagerAndroidOnPageSelectedEventData } from 'react-native';
 import { store, WeatherAppStore } from './store/WeatherAppStore';
 import { Provider, connect } from 'react-redux';
 import AddNewLocation from './views/AddNewLocation';
@@ -7,6 +7,7 @@ import SubSection from './components/SubSection';
 import HamburgerMenu from './components/HamburgerMenu';
 import HeaderBar from './views/HeaderBar';
 import WeatherLocation from './views/WeatherLocation';
+import MappedLocation from './structures/MappedLocation';
 
 type ClassNames = keyof typeof styles;
 
@@ -17,7 +18,7 @@ function mapStateToProps (storeState: WeatherAppStore.Stores): WeatherAppStore.L
 }
 
 export interface WeatherAppProps {
-    locations: Array<String>;
+    locations: Array<MappedLocation>;
 }
 
 export interface WeatherAppState {
@@ -39,17 +40,42 @@ class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
         };
     }
 
+    componentWillReceiveProps (nextProps: WeatherAppProps, nextState: WeatherAppState) {
+        console.log(nextProps.locations);
+    }
     onNewPageSelected = (event: NativeSyntheticEvent<ViewPagerAndroidOnPageSelectedEventData>) => {
         this.setState({ selectedIndex: event.nativeEvent.position });
     }
 
     render () {
         return (
-
             <View style={styles.container}>
+                <StatusBar hidden={true} />
+                <AddNewLocation />
+                <FlatList
+                    scrollEventThrottle={0}
+                    pagingEnabled={true}
+                    data={this.props.locations}
+                    showsHorizontalScrollIndicator={false}
+                    showsVerticalScrollIndicator={false}
+                    horizontal={true}
+                    removeClippedSubviews={true}
+
+                    renderItem={
+                        ({ item }) =>
+                            <View>
+                                <WeatherLocation
+                                    zipcode={Number.parseInt((item.zipcode || 0).toString())}
+                                />
+                            </View>
+                    }
+                />
+
                 {
+
+                    /*
                     (Platform.OS === 'android') ?
-                        /* TODO: this is insanely messy. fix this */
+
                         <DrawerLayoutAndroid
                             drawerWidth={300}
                             drawerPosition={DrawerLayoutAndroid.positions.Left}
@@ -85,6 +111,7 @@ class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
                                 ) : <View />
                             }
                         </View>
+                        */
                 }
             </View>
         );

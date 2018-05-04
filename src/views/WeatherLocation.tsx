@@ -154,6 +154,7 @@ const backgrounds = [background0, background1, background2, background3, backgro
 const styles = StyleSheet.create({
     container: {
         height: '100%',
+        width: Dimensions.get('window').width,
         //flex: 1,
         //overflow: 'hidden'
     },

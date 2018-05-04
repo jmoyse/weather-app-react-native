@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { Platform, StyleSheet, Text, View, Image, TextInput, Modal } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, TextInput, Modal, Button } from 'react-native';
 import { store, WeatherAppStore } from '../store/WeatherAppStore';
 import { setLocationWindowVisible } from '../actions/ShowNewLocationAction';
 import { addLocation } from '../actions/AddLocationAction';
 import { connect, Provider } from 'react-redux';
 import FontStyles from '../styles/FontStyles';
+import MappedLocation from '../structures/MappedLocation';
 
 interface AddNewLocationProps {
     visible: boolean;
@@ -32,7 +33,9 @@ class AddNewLocationRedux extends React.Component<AddNewLocationProps, AddNewLoc
 
         if (isNumber && (zipcode as number).toString() === text && text.length === 5) {
             this.setState({ inputText: '' });
-            store.dispatch(addLocation(zipcode.toString()));
+            let newLocation = new MappedLocation(zipcode);
+
+            store.dispatch(addLocation(newLocation));
             store.dispatch(setLocationWindowVisible(false));
             // add zipcode to the store.
             // then hide the modal because we added one successfully
@@ -71,7 +74,14 @@ class AddNewLocationRedux extends React.Component<AddNewLocationProps, AddNewLoc
                                 {(this.state.inputText.length > 0) ? 'Invalid zipcode ' + this.state.inputText : ' '}
                             </Text>
                         </View>
+                        <Button
+                            onPress={() => store.dispatch(setLocationWindowVisible(false))}
+                            title="Exit"
+                            color="white"
+                            accessibilityLabel="Exit"
+                        />
                     </View>
+
 
                 </Modal>
             </Provider>

@@ -1,3 +1,5 @@
+import MappedLocation from '../structures/MappedLocation';
+
 // action strings
 const ADD_LOCATION = 'ADD_LOCATION';
 type ADD_LOCATION = typeof ADD_LOCATION;
@@ -8,22 +10,22 @@ type REMOVE_LOCATION = typeof REMOVE_LOCATION;
 // action type
 interface AddLocationAction {
     type: string;
-    location: string;
+    location: MappedLocation;
 }
 interface RemoveLocationAction {
     type: string;
-    location: string;
+    location: MappedLocation;
 }
 
 // actions
-function addLocation (location: string): AddLocationAction {
+function addLocation (location: MappedLocation): AddLocationAction {
     return {
         type: ADD_LOCATION,
         location: location,
     };
 }
 
-function removeLocation (location: string): RemoveLocationAction {
+function removeLocation (location: MappedLocation): RemoveLocationAction {
     return {
         type: REMOVE_LOCATION,
         location: location,

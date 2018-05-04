@@ -1,11 +1,13 @@
 
 import { ADD_LOCATION, REMOVE_LOCATION, AddLocationAction } from '../actions/AddLocationAction';
 import { WeatherAppStore } from '../store/WeatherAppStore';
+import MappedLocation from '../structures/MappedLocation';
 
 export default function addLocationReducer (currentState: WeatherAppStore.LocationStore, action: AddLocationAction | any): WeatherAppStore.LocationStore {
     if (currentState === undefined) {
         currentState = {
-            locations: ['94102', '21044']
+
+            locations: [new MappedLocation(94102), new MappedLocation(21044)]
         };
     }
 
