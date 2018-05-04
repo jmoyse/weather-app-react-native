@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Platform, StyleSheet, Text, View, Image, TextInput, Modal, Button } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, TextInput, Modal, TouchableOpacity } from 'react-native';
 import { store, WeatherAppStore } from '../store/WeatherAppStore';
 import { setLocationWindowVisible } from '../actions/ShowNewLocationAction';
 import { addLocation } from '../actions/AddLocationAction';
@@ -74,12 +74,14 @@ class AddNewLocationRedux extends React.Component<AddNewLocationProps, AddNewLoc
                                 {(this.state.inputText.length > 0) ? 'Invalid zipcode ' + this.state.inputText : ' '}
                             </Text>
                         </View>
-                        <Button
+                        <TouchableOpacity
                             onPress={() => store.dispatch(setLocationWindowVisible(false))}
-                            title="Exit"
-                            color="white"
+
+
                             accessibilityLabel="Exit"
-                        />
+                        >
+                            <Text >Exit</Text>
+                        </TouchableOpacity>
                     </View>
 
 
