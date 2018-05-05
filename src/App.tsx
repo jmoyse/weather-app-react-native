@@ -52,14 +52,13 @@ class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
             <View style={styles.container}>
                 <StatusBar hidden={true} />
                 <AddNewLocation />
+
                 <FlatList
-                    scrollEventThrottle={0}
+
                     pagingEnabled={true}
                     data={this.props.locations}
-                    showsHorizontalScrollIndicator={false}
-                    showsVerticalScrollIndicator={false}
+
                     horizontal={true}
-                    removeClippedSubviews={true}
 
                     renderItem={
                         ({ item }) =>

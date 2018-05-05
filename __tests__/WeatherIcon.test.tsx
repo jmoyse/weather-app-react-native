@@ -23,8 +23,11 @@ test('invalid weather ID renders', () => {
 });
 
 test('updated weatherID changes properly', () => {
-  const props: WeatherIconProps = { weatherID: 20 };
-  const icon = new WeatherIcon(props);
+  const icon = renderer.create().toJSON();
+  expect(icon).toMatchSnapshot();
+
+  //const props: WeatherIconProps = { weatherID: 20 };
+  //const icon = new WeatherIcon(props);
   //icon.setState({ weatherID: 35 });
   expect(icon).toMatchSnapshot();
 });

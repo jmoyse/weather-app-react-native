@@ -3399,13 +3399,10 @@
       "integrity": "sha1-rOb/gIwc5mtX0ev5eXessCM0z8E=",
       "dev": true
     },
-==== BASE ====
     "ecc-jsbn": {
       "version": "0.1.1",
       "resolved": "https://registry.npmjs.org/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz",
       "integrity": "sha1-D8c6ntXw1Tw4GTOYUj735UN3dQU=",
-      "dev": true,
-==== BASE ====
       "optional": true,
       "requires": {
         "jsbn": "0.1.1"
