@@ -7,14 +7,16 @@
     "experimentalDecorators": true,
     "jsx": "react-native",
     "lib": [
+      "dom",
       "es2015",
+      "es2016"
     ],
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "noEmitHelpers": true,
     "importHelpers": true,
-    "strict": true,
+    "strict": false,
     "allowJs": true,
     "noImplicitReturns": true,
   },
