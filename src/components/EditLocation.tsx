@@ -102,20 +102,20 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     menuEntry: {
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'row',
+        width: "100%",
+        display: "flex",
+        flexDirection: "row",
         paddingLeft: 5,
-        alignItems: 'center'
+        alignItems: "center"
     },
     menuText: {
-        backgroundColor: 'black',
-        width: '100%',
+        backgroundColor: "black",
+        width: "100%",
         height: 30
     },
 
     headerEntry: {
-        color: 'white',
+        color: "white",
         paddingLeft: 10,
         paddingTop: 5,
     },
@@ -123,8 +123,8 @@ const styles = StyleSheet.create({
         margin: 5
     },
     textStyle: {
-        color: 'white'
-    }
+        color: "white"
+    },
 });
 
 const HamburgerMenu = connect(mapStateToProps)(HamburgerMenuRedux);

@@ -2,26 +2,20 @@
   "compilerOptions": {
     "target": "es2015",
     "module": "es2015",
-    //"outDir": "build",
     "rootDir": "src",
     "sourceMap": true,
     "experimentalDecorators": true,
     "jsx": "react-native",
     "lib": [
-      "dom",
       "es2015",
-      "es2016"
     ],
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
-    //"noEmit": true,
     "noEmitHelpers": true,
     "importHelpers": true,
     "strict": true,
-    //"allowJs": true,
     "allowJs": true,
-    //"allowSyntheticDefaultImports": true,
     "noImplicitReturns": true,
   },
   "exclude": [

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`invalid weather ID renders 1`] = `
+WeatherIcon {
+  "context": undefined,
+  "props": Object {
+    "weatherID": "asdf",
+  },
+  "refs": Object {},
+  "updater": Object {
+    "enqueueForceUpdate": [Function],
+    "enqueueReplaceState": [Function],
+    "enqueueSetState": [Function],
+    "isMounted": [Function],
+  },
+}
+`;
+
+exports[`matches snapshot 1`] = `
+WeatherIcon {
+  "context": undefined,
+  "props": Object {
+    "weatherID": 1,
+  },
+  "refs": Object {},
+  "updater": Object {
+    "enqueueForceUpdate": [Function],
+    "enqueueReplaceState": [Function],
+    "enqueueSetState": [Function],
+    "isMounted": [Function],
+  },
+}
+`;
+
+exports[`updated weatherID changes properly 1`] = `
+WeatherIcon {
+  "context": undefined,
+  "props": Object {
+    "weatherID": 20,
+  },
+  "refs": Object {},
+  "updater": Object {
+    "enqueueForceUpdate": [Function],
+    "enqueueReplaceState": [Function],
+    "enqueueSetState": [Function],
+    "isMounted": [Function],
+  },
+}
+`;

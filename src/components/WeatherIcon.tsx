@@ -81,14 +81,12 @@ let json = {
     47: thunderstorm, //'isolated thundershowers'
 };
 
-class WeatherIcon extends React.Component<WeatherIconProps, WeatherIconState> {
+export class WeatherIcon extends React.Component<WeatherIconProps, WeatherIconState> {
     constructor (props: WeatherIconProps) {
         super(props);
     }
-
     render () {
         return (
-
             <Image
                 style={styles.image}
                 source={this.props.weatherID >= 0 ? json[this.props.weatherID] : ''}

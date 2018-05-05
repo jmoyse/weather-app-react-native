@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Platform, StyleSheet, Text, View, FlatList, ScrollView, Image, StatusBar, ViewPagerAndroid, DrawerLayoutAndroid, Button, ViewPagerAndroidStatic, NativeSyntheticEvent, ViewPagerAndroidOnPageSelectedEventData } from 'react-native';
+import { Platform, StyleSheet, Text, View, FlatList, ScrollView, Image, StatusBar, ViewPagerAndroid, DrawerLayoutAndroid, Button, NativeSyntheticEvent, ViewPagerAndroidOnPageSelectedEventData } from 'react-native';
 import { store, WeatherAppStore } from './store/WeatherAppStore';
 import { Provider, connect } from 'react-redux';
 import AddNewLocation from './views/AddNewLocation';
@@ -41,7 +41,7 @@ class AppRedux extends React.Component<WeatherAppProps, WeatherAppState> {
     }
 
     componentWillReceiveProps (nextProps: WeatherAppProps, nextState: WeatherAppState) {
-        console.log(nextProps.locations);
+        //console.log(nextProps.locations);
     }
     onNewPageSelected = (event: NativeSyntheticEvent<ViewPagerAndroidOnPageSelectedEventData>) => {
         this.setState({ selectedIndex: event.nativeEvent.position });

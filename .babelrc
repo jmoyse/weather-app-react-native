@@ -1,12 +1,11 @@
 {
+  "sourceMaps": "inline",
   "presets": [
-    "babel-preset-react-native-stage-0/decorator-support"
+    "es2015",
+    "react-native",
+    "react-native-stage-0"
   ],
-  "env": {
-    "development": {
-      "plugins": [
-        "transform-react-jsx-source"
-      ]
-    }
-  }
+  "plugins": [
+    "transform-react-jsx-source"
+  ]
 }
