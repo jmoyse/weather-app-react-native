@@ -52,7 +52,7 @@
     "appcenter": "^1.5.0",
     "appcenter-analytics": "^1.5.0",
     "appcenter-crashes": "^1.5.0",
-    "babel-plugin-transform-assets": "^1.0.1",
+    "babel-plugin-transform-assets": "^0.2.0",
     "concurrently": "^3.5.1",
     "jest-cli": "^22.4.3",
     "react": "16.3.1",
