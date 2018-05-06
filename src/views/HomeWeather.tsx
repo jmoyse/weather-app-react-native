@@ -32,7 +32,7 @@ export default class HomeWeather extends React.Component<HomeWeatherProps, HomeW
         }
     }
 
-    capitolizeFirstChar (input: string): string {
+    capitalizeFirstChar (input: string): string {
         let output = '';
         if (input && input.length > 0) {
             let tmp = input.toLowerCase().substr(1);
@@ -49,24 +49,24 @@ export default class HomeWeather extends React.Component<HomeWeatherProps, HomeW
                         <View style={styles.icon}>
                             {
                                 (this.props.forecastJson as any) !== undefined ?
-                                    <WeatherIcon weatherID={(this.props.forecastJson as any).results.channel.item.condition.code} />
+                                    <WeatherIcon weatherID={Number.parseInt((this.props.forecastJson as any).results.channel.item.condition.code)} />
                                     : <View />
                             }
                         </View>
 
                         <Text style={styles.conditionsText}>
-                            {(this.props.forecastJson as any) !== undefined ? this.capitolizeFirstChar((this.props.forecastJson as any).results.channel.item.condition.text) : ''}
+                            {(this.props.forecastJson as any) !== undefined ? this.capitalizeFirstChar((this.props.forecastJson as any).results.channel.item.condition.text) : ''}
                         </Text>
                     </View>
 
                     <View style={styles.currentTempView}>
-                        <Image source={high} style={{ height: 20, width: 20 }} />
+                        <Image source={require('../icons/system/ic_keyboard_arrow_up_white_24dp_2x.png')} style={{ height: 20, width: 20 }} />
 
-                        <Text style={styles.highText}>
+                        <Text style={styles.highText} testID="currentLow">
                             {(this.props.forecastJson as any) !== undefined ? (this.props.forecastJson as any).results.channel.item.forecast[0].high + '°' : ''}
                         </Text>
-                        <Image source={low} style={{ height: 20, width: 20 }} />
-                        <Text style={styles.lowText} >
+                        <Image source={require('../icons/system/ic_keyboard_arrow_down_white_24dp_2x.png')} style={{ height: 20, width: 20 }} />
+                        <Text style={styles.lowText} testID="currentHigh">
                             {(this.props.forecastJson as any) !== undefined ? (this.props.forecastJson as any).results.channel.item.forecast[0].low + '°' : ''}
                         </Text>
                     </View>
@@ -74,6 +74,7 @@ export default class HomeWeather extends React.Component<HomeWeatherProps, HomeW
                     <Text style={styles.currentTempText}
                         allowFontScaling={true}
                         adjustsFontSizeToFit={true}
+                        testID="currentTemp"
                     >
                         {(this.props.forecastJson as any) !== undefined ? (this.props.forecastJson as any).results.channel.item.condition.temp + '°' : ''}
                     </Text>
@@ -83,8 +84,8 @@ export default class HomeWeather extends React.Component<HomeWeatherProps, HomeW
     }
 }
 
-const low = require('../icons/system/ic_keyboard_arrow_down_white_24dp_2x.png');
-const high = require('../icons/system/ic_keyboard_arrow_up_white_24dp_2x.png');
+let low = require('../icons/system/ic_keyboard_arrow_down_white_24dp_2x.png');
+let high = require('../icons/system/ic_keyboard_arrow_up_white_24dp_2x.png');
 
 const styles = StyleSheet.create({
     container: {

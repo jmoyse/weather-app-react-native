@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { isNumber, isString } from 'util';
 
 export interface WeatherIconProps {
     weatherID: number;
@@ -29,8 +30,10 @@ const sunny = require('../icons/weather2/01.png');
 const tstormrain = require('../icons/weather2/13.png');
 const thunderstorm = require('../icons/weather2/13.png');
 const wind = require('../icons/weather2/41.png');
+const blank = require('../icons/Blank.png');
+export const BLANK_ID = 99;
 
-let json = {
+export const icons = {
     0: thunderstorm, //'tornado'
     1: tstormrain, //'tropical storm'
     2: thunderstorm, //'hurricane'
@@ -79,17 +82,35 @@ let json = {
     45: thunderstorm, //'thundershowers'
     46: snowshower, //'snow showers'
     47: thunderstorm, //'isolated thundershowers'
+    99: blank // blank image
 };
 
 export class WeatherIcon extends React.Component<WeatherIconProps, WeatherIconState> {
     constructor (props: WeatherIconProps) {
         super(props);
     }
+
+    public getImageById (id: Object): Object {
+        if (isString(id)) {
+            id = Number.parseInt(id);
+        }
+
+        let imageID = BLANK_ID; // blank image
+
+        if (id !== null && isNumber(id)) {
+            let path = icons[id];
+            if (path) {
+                imageID = id;
+            }
+        }
+        return icons[imageID];
+    }
+
     render () {
         return (
             <Image
                 style={styles.image}
-                source={this.props.weatherID >= 0 ? json[this.props.weatherID] : ''}
+                source={this.getImageById(this.props.weatherID)}
             />
         );
     }

@@ -21,7 +21,7 @@ export default class HeaderBar extends React.Component<HeaderBarProps, HeaderBar
             <View style={styles.view}>
                 <StatusBar animated={true} barStyle="default" />
                 <View style={styles.barView}>
-                    <Image source={hamburgerIcon} />
+                    <Image source={require('../icons/system/ic_menu_white_24dp.png')} />
 
                     <View style={styles.locationView}>
 
@@ -48,7 +48,7 @@ export default class HeaderBar extends React.Component<HeaderBarProps, HeaderBar
                         accessibilityLabel="Show 5 day forecast"
                         style={{ paddingRight: 5 }}
                     >
-                        <Image source={plusIcon} />
+                        <Image source={require('../icons/system/ic_plus_white_24dp.png')} />
                     </TouchableOpacity>
 
                 </View>
@@ -56,9 +56,6 @@ export default class HeaderBar extends React.Component<HeaderBarProps, HeaderBar
         );
     }
 }
-
-const hamburgerIcon = require('../icons/system/ic_menu_white_24dp.png');
-const plusIcon = require('../icons/system/ic_plus_white_24dp.png');
 
 const styles = StyleSheet.create({
     view: {

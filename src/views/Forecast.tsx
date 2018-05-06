@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ViewPagerAndroid, StatusBar, ToolbarAndroid, WebView, Button } from 'react-native';
-import ForecastBox from '../components/ForecastBox';
 import SubSection from '../components/SubSection';
 import WeatherDay from '../components/WeatherDay';
 
@@ -26,7 +25,7 @@ export default class Forecast extends React.Component<ForecastProps, ForecastSta
                             (
                                 (
                                     (this.props.forecastJson as any).results.channel.item.forecast as Array<Object>).slice(0, this.state.showExtendedForecast ? 10 : 5).map(dayNode =>
-                                        <View key={dayNode.toString() + Math.random() * 1000} >
+                                        <View key={dayNode.toString()} >
                                             <WeatherDay key={((dayNode as any).date as string)} dayJSON={dayNode} />
                                             <View
                                                 style={styles.line}

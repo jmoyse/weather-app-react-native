@@ -4,18 +4,23 @@
   "private": true,
   "jest": {
     "globals": {
+      "__DEV__": false,
       "ts-jest": {
         "useBabelrc": true
       }
+    },
+    "setupFiles": [
+      "<rootDir>/jest/setupTests.js"
+    ],
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy",
+      ".+\\.(png|jpg|gif)$": "identity-obj-proxy"
     },
     "preset": "react-native",
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "transform": {
       "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "moduleNameMapper": {
-      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "moduleFileExtensions": [
       "ts",
@@ -28,6 +33,7 @@
   },
   "scripts": {
     "start": "react-native start --transformer node_modules/react-native-typescript-transformer/index.js --sourceExts ts,tsx",
+    "lint": "tslint src",
     "android": "react-native run-android",
     "windows": "react-native run-windows",
     "web": "react-native run-web",
@@ -39,35 +45,42 @@
     "android-release": "cd android && gradlew assembleRelease && copy app\\build\\outputs\\apk\\app-release.apk ..\\build"
   },
   "dependencies": {
+    "@types/react": "*",
+    "@types/react-native": "^0.55.11",
+    "@types/react-redux": "*",
+    "@types/redux": "^3.6.31",
     "appcenter": "^1.5.0",
     "appcenter-analytics": "^1.5.0",
     "appcenter-crashes": "^1.5.0",
-    "babel-plugin-transform-react-jsx-source": "^6.22.0",
-    "babel-preset-jest": "^23.0.0-charlie.1",
+    "babel-plugin-transform-assets": "^1.0.1",
     "concurrently": "^3.5.1",
-    "react": "^16.3.2",
+    "jest-cli": "^22.4.3",
+    "react": "16.3.1",
+    "react-dom": "^16.0.0",
     "react-native": "0.55.3",
     "react-native-typescript-transformer": "*",
     "react-native-windows": "^0.55.0-rc.0",
     "react-redux": "*",
+    "react-test-renderer": "^16.3.2",
     "redux": "*",
     "rnpm-plugin-windows": "*",
     "tslib": "*",
     "typescript": "*"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.1.10",
     "@types/jest": "^22.2.3",
-    "@types/react": "*",
-    "@types/react-native": "^0.55.11",
-    "@types/react-redux": "*",
-    "@types/react-test-renderer": "*",
     "babel-jest": "^23.0.0-charlie.1",
-    "babel-plugin-jest-hoist": "^23.0.0-charlie.1",
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
     "babel-preset-react-native-stage-0": "*",
+    "enzyme": "3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^22.4.3",
-    "react-test-renderer": "*",
-    "ts-jest": "^22.4.4"
+    "jest": "^20.0.4",
+    "jest-enzyme": "^6.0.0",
+    "jsdom": "^11.5.1",
+    "react-native-mock-render": "^0.0.19",
+    "ts-jest": "^22.4.5"
   },
   "rnpm": {
     "assets": [

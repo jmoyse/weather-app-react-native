@@ -1,8 +1,25 @@
 {
   "presets": [
-    "babel-preset-react-native-stage-0/decorator-support"
+    "babel-preset-react-native-stage-0/decorator-support",
+    "react-native"
   ],
   "env": {
-
-  }
+    "test": {
+      "plugins": [
+        [
+          "transform-assets",
+          {
+            "extensions": [
+              "png"
+            ],
+            "name": "[name].[ext]"
+          }
+        ]
+      ]
+    }
+  },
+  "retainLines": true,
+  "compact": true,
+  "comments": false,
+  "sourceMaps": true
 }

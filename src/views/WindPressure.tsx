@@ -8,7 +8,7 @@ interface WindPressureProps {
 }
 
 interface WindPressureState { }
-const windmill = require('../icons/windmill.png');
+
 export default class WindPressure extends React.Component<WindPressureProps, WindPressureState> {
     constructor (props: WindPressureProps) {
         super(props);
@@ -52,7 +52,7 @@ export default class WindPressure extends React.Component<WindPressureProps, Win
                     />
                 </View>
                 <View style={styles.windmillContainer} >
-                    <Image source={windmill} style={styles.windmillIconStyle} resizeMode="contain" />
+                    <Image source={require('../icons/windmill.png')} style={styles.windmillIconStyle} resizeMode="contain" />
 
                     {
                         /*

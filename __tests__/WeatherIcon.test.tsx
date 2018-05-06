@@ -1,33 +1,37 @@
-// __tests__/Intro-test.js
 import React from 'react';
-import { WeatherIconProps, WeatherIcon } from '../src/components/WeatherIcon';
-import renderer from 'react-test-renderer';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import 'react-native';
+import { WeatherIconProps, WeatherIcon, icons, BLANK_ID } from '../src/components/WeatherIcon';
+import { shallow, configure, mount, ShallowWrapper, render, } from 'enzyme';
 
+describe("WeatherIcon", () => {
+  let props;
+  let wrapper;
 
-test('renders correctly (JSX)', () => {
-  const icon = renderer.create(<WeatherIcon weatherID={1} />).toJSON();
-  expect(icon).toMatchSnapshot();
-});
+  beforeEach(() => {
+    props = { weatherID: 0 };
+    wrapper = shallow(<WeatherIcon {...props} />);
+  });
 
+  it('matches snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
-test('matches snapshot (JS)', () => {
-  const props: WeatherIconProps = { weatherID: 1 };
-  const icon = new WeatherIcon(props);
-  expect(icon).toMatchSnapshot();
-});
+  it('renders expected image for weatherID 0', () => {
+    wrapper.setProps({ weatherID: 0 });
+    wrapper.render();
+    let iconSource = wrapper.find("Image").prop("source");
+    expect(iconSource).toEqual(icons[0]);
+  });
 
-test('invalid weather ID renders', () => {
-  const icon = renderer.create(<WeatherIcon weatherID={('asdf' as any)} />).toJSON();
-  expect(icon).toMatchSnapshot();
-});
+  it('renders expected update image for weatherID 25', () => {
+    wrapper.setProps({ weatherID: 25 });
+    let iconSource = wrapper.find("Image").prop("source");
+    expect(iconSource).toEqual(icons[25]);
+  });
 
-test('updated weatherID changes properly', () => {
-  const icon = renderer.create().toJSON();
-  expect(icon).toMatchSnapshot();
-
-  //const props: WeatherIconProps = { weatherID: 20 };
-  //const icon = new WeatherIcon(props);
-  //icon.setState({ weatherID: 35 });
-  expect(icon).toMatchSnapshot();
+  it('renders expected invalid image', () => {
+    wrapper.setProps({ weatherID: -1 });
+    let iconSource = wrapper.find("Image").prop("source");
+    expect(iconSource).toEqual(icons[BLANK_ID]);
+  });
 });

@@ -33,6 +33,7 @@ export default class WeatherLocation extends React.Component<WeatherLocationProp
 
     componentDidMount () {
         this.onNewZipcode();
+        console.log('selected background ' + this.selectedBackground);
     }
 
     componentWillReceiveProps (nextProps: WeatherLocationProps, nextState: WeatherLocationState) {
